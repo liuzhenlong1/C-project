@@ -1,0 +1,82 @@
+.banner swiper {
+    height: calc(100vw * 280 / 520);
+}
+.banner image {
+    width: 100%;
+}
+.intro {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    text-indent: 2em;
+    font-size: 25rpx;
+}
+.intro text {
+    display: block;
+    margin-top: 20rpx;
+}
+.intro_more {
+    display: inline-block;
+    position: absolute;
+    right: 40rpx;
+    bottom: 15rpx;
+    font-size: 25rpx;
+    color: #1e90ff;
+}
+.iconlist {
+    display: flex;
+    justify-content: space-around;
+}
+.iconlist navigator {
+    width: 20%;
+    text-align: center;
+}
+.iconlist navigator image {
+    width: 60%;
+}
+.iconlist navigator text {
+    display: block;
+    font-size: 25rpx;
+}
+.classbox navigator {
+    margin: 0 auto;
+    margin-top: 20rpx;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    padding: 10rpx;
+    position: relative;
+}
+.classtitle {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    line-height: 60rpx;
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+    color: #1e90ff;
+}
+.classbox navigator text:nth-child(2) {
+    color: red;
+    background-color: yellow;
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+}
+.classtext {
+    width: 100%;
+    display: flex;
+}
+.classtext text {
+    display: inline-block;
+    width: 80%;
+    padding: 10rpx;
+    font-size: 25rpx;
+    text-indent: 2em;
+}
+.classtext image {
+    display: inline-block;
+    width: 20%;
+}
+.contact {
+    display: flex;
+    padding: 30rpx;
+}

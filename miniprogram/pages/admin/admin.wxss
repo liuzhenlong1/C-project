@@ -1,0 +1,16 @@
+.login {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50%;
+}
+.login input {
+    height: 70rpx;
+    margin-top: 50rpx;
+    border-bottom: 1px solid #808080;
+}
+.login button {
+    margin-top: 100rpx;
+}
+.right{
+    width: 400rpx
+}

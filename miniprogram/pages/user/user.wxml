@@ -1,0 +1,20 @@
+
+<view class="box">
+  <view class="ava">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="info">
+    <view class="name">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class="sign">
+      <textarea placeholder="请输入您的个性签名" type="text" maxlength="25" bindblur="getSign"/>
+    </view>
+  </view>
+</view>
+
+<view class="box" wx:for="{{menu}}">
+  <navigator class="{{index}}" url='{{item[1]}}'>
+    <view>{{item[0]}}</view>
+  </navigator>
+</view>

@@ -1,0 +1,60 @@
+<view class="box">
+    <text class="title">请填写相关信息</text>
+    <view class="signupbox">
+        <form>
+            <view>
+                <text>工作名称</text>
+                <input placeholder="请输入工作名称" maxlength="10" type="text" confirm-type="done" bindblur="nameInput" />
+            </view>
+
+            <view>
+                <text>工作类型</text>
+                <radio-group bindchange="styleSelect">
+                    <label>
+                        <radio color="#1e90ff" value="兼职" />兼职
+                    </label>
+                    <label>
+                        <radio color="#1e90ff" value="全职" />全职
+                    </label>
+                </radio-group>
+            </view>
+
+            <view>
+                <text space='emsp'>待  遇</text>
+                <checkbox-group bindchange="checkboxChange">
+                    <label wx:for="{{treatment}}" wx:key="items">
+                        <checkbox value="{{item}}" />{{item}}
+                     </label>
+                </checkbox-group>  
+            </view>
+
+            <view>
+                <text>工资发放</text>
+                <picker value="{{item}}" range="{{classArray}}" bindchange="classSelect">
+                    <text wx:if="{{!data_class}}" style="font-size:30rpx;color:#808080">点击选择工资发放类型</text>
+                    <text wx:else style="font-size:30rpx;">{{classArray[data_class]}}</text>
+                </picker>
+            </view>
+            <view>
+                <text>招收人数</text>
+                <input placeholder="请输入数量(人)" maxlength="10" type="number" confirm-type="done" bindblur="peopleInput" />
+            </view>
+            <view>
+                <text space='emsp'>工  资</text>
+                <input placeholder="请输入工资(元/天)" maxlength="10" type="number" confirm-type="done" bindblur="salaryInput" />
+            </view>
+            <view>
+                <text space='emsp'>地  址</text>
+                <input placeholder="请输入您的详细地址" maxlength="50" type="text" confirm-type="done" bindblur="addressInput" />
+            </view>
+            <view>
+                <text>职位详情</text>
+                <textarea placeholder="请简单介绍工作内容及要求" bindblur="newsletterInput"></textarea>
+            </view>
+            <view>
+                <button size="mini" style="width:180rpx;" type="primary" form-type="submit" bindtap="submitBtn">提交</button>
+                <button size="mini" style="width:180rpx;" form-type="reset" bindtap="resetBtn">重置</button>
+            </view>
+        </form>
+    </view>
+</view>

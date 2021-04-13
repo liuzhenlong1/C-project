@@ -1,0 +1,12 @@
+<view class="box">
+    <text class="title">用户协议</text>
+    <view class="eulatext"></view>
+    <view class="confirm">
+        <checkbox-group bindchange="eulaCheck">
+            <label>
+                <checkbox value="1" />我已知晓该驾校用户协议并且同意执行
+            </label>
+        </checkbox-group>
+        <button type="primary" bindtap="eulaBtn">完成</button>
+    </view>
+</view>

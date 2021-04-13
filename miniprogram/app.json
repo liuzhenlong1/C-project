@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/resume/resume",
+    "pages/user/user",
+    "pages/admin/admin",
+    "pages/publishment/publishment",
+    "pages/eula/eula",
+    "pages/result/result"
+    
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1e90ff",
+    "navigationBarTitleText": "行车者",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/_home.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "icon/admin.png",
+        "selectedIconPath": "icon/_admin.png"
+      }
+    ],
+    "selectedColor": "#1e90ff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

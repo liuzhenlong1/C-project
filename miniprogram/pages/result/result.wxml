@@ -1,0 +1,10 @@
+<view wx:if="{{data_resultCode == 0}}">
+    <icon type="success" size="120" />
+    <text>发布成功</text>
+    <button type="primary" bindtap="indexBtn">返回首页</button>
+</view>
+<view wx:if="{{data_resultCode == 1}}">
+    <icon type="warn" size="120" />
+    <button type="primary" bindtap="signupBtn">返回发布页面</button>
+    <button type="primary" bindtap="indexBtn">返回首页</button>
+</view>

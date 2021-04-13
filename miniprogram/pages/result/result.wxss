@@ -1,0 +1,11 @@
+view {
+    padding-top: 30%;
+    text-align: center;
+}
+view text {
+    margin-top: 50rpx;
+    display: block;
+}
+view button {
+    margin-top: 100rpx;
+}

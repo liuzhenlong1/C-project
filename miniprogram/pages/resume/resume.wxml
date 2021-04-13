@@ -1,0 +1,91 @@
+<view class="box">
+
+  <text class="title">我的简历</text>
+  <form>
+    <!--我的信息部分-->
+      <view class="box">
+        <text class="catalog">我的信息</text>
+        <view class="signupbox">
+          <view>
+            <text space='emsp'>姓  名</text>
+            <input placeholder="请输入姓名" maxlength="15" type="text" confirm-type="done" bindblur="nameInput" />
+          </view>
+          <view>
+            <text space='emsp'>性  别</text>
+            <radio-group bindchange="styleSelect">
+              <label>
+                <radio color="#1e90ff" value="男" />男
+              </label>
+              <label>
+                <radio color="#1e90ff" value="女" />女
+              </label>
+            </radio-group>
+          </view>
+          <view>
+            <text>出生日期</text>
+            <picker mode="date" value="{{date}}" start="1960-01-01" end="{{date}}" bindchange="bindDateChange">
+              <text wx:if="{{!date}}">请选择出生日期</text>
+              <text wx:else>{{date}}</text>
+            </picker>
+          </view>
+          <view>
+            <text space="emsp" bindchange="bindXueliChange">学  历</text>
+              <picker range="{{data_Xueli}}" bindchange="bindXueliChange">
+                <text wx:if="{{!Xueli}}">请选择当前学历</text>
+                <text wx:else>{{data_Xueli[Xueli]}}</text>
+              </picker>
+          </view>
+          <view>
+            <text>工作经验</text>
+            <picker range="{{data_job_experience}}" bindchange="bindExpchange">
+              <text wx:if="{{!job_experience}}">请选择工作经验</text>
+              <text wx:else>{{data_job_experience[job_experience]}}</text>
+            </picker>
+          </view>
+          <view>
+            <text>当前状态</text>
+            <picker mode="multiSelector"  bindchange="bind_stu_stata_Change" bindcolumnchange="bind_ss_col_Change" range="{{data_std_sta}}">
+              <text wx:if="{{!stu_sta_arr}}">请选择当前状态</text>
+              <text wx:else>{{data_std_sta[0][stu_sta_arr[0]]}} {{data_std_sta[1][stu_sta_arr[1]]}}</text>
+            </picker>
+          </view>
+
+          <view>
+            <text>联系方式</text>
+            <input type="digit" maxlength="11"/>
+          </view>
+
+          <view>
+            <text>自我介绍</text>
+            <textarea placeholder="请简单介绍自己，以便更容易找到合适的工作" bindblur="newsletterInput"></textarea>
+          </view>
+        </view>
+    </view>
+      <!--我的求职意向-->
+    <view class="box">
+      <text class="catalog">求职意向</text>
+      <view class="signupbox">
+        <view>
+          <text>求职类型</text>
+          <picker range="{{data_job_style}}" bindchange="bind_job_style">
+            <text wx:if="{{!job_style}}">{{data_job_style[0]}}</text>
+            <text wx:else>{{data_job_style[job_style]}}</text>
+          </picker> 
+        </view>
+        <view>
+          <text>期望城市</text>
+          <input placeholder="请输入城市" type="text"/>
+        </view>
+        <view>
+          <text>期望岗位</text>
+          <input placeholder="请输入求职岗位" type="text"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="resume_but">
+      <button size="mini" style="width:180rpx;" type="primary" form-type="submit" bindtap="submitBtn">提交</button>
+      <button size="mini" style="width:180rpx;" form-type="reset" bindtap="resetBtn">重置</button>
+    </view>
+  </form>
+</view>

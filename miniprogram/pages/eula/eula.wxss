@@ -1,0 +1,12 @@
+.eulatext {
+    margin-top: 30rpx;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+}
+.confirm {
+    text-align: center;
+    padding-bottom: 30rpx;
+}
+.confirm checkbox-group {
+    line-height: 80rpx;
+}
