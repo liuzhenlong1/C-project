@@ -1,0 +1,7 @@
+<view class="box" wx:if="{{isResume}}">
+    <text class="title">我的简历</text>
+</view>
+<view wx:else>
+    <view style="text-align:center;margin:50rpx 0">您当前没有简历</view>
+    <button type="primary" bindtap="goTo">前往填写</button>
+</view>

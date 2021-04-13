@@ -1,52 +1,43 @@
-Page({
-  data: {
-    data_Xueli: ['硕士及以上','本科','专科','专科以下'],
-    data_job_experience:["本届应届生","高校学生","1年以下","1-3年","3-5年","5年以上"],
-    data_std_sta:[
-      ["学生","非学生"],
-      ["随便看看","积极找工作","暂时不找工作"]
-    ],
-    data_job_style:["不限","兼职","全职"]
-  },
-  bindDateChange(e) {
-    this.setData({
-      date: e.detail.value
-    })
-  },
-  bindXueliChange(e){
-    this.setData({
-      Xueli: e.detail.value
-    })
-  },
-  bindExpchange(e){
-    this.setData({
-      job_experience: e.detail.value
-    })
-  },
-  bindStatachange(e){
-    this.setData({
-      stata: e.detail.value
-    })
-  },
-   //获取选择结果
-  bind_stu_stata_Change(e){
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      stu_sta_arr:e.detail.value
-    })
-  },
-  //获取每一列的选择结果
-  bind_ss_col_Change(e){
-    this.setData({
-      isStudent:e.detail.column,
-      stata:e.detail.value
-    })
-  },
-  bind_job_style(e){
-    this.setData({
-      job_style:e.detail.value
-    })
-  },
-
-  
+Page ({
+    data: {
+        eduBg: ["博士及以上", "硕士", "本科", "专科", "高中及以下"],
+        workExp: ["5年及以上", "3-4年", "1-2年", "应届生", "在校学生"]
+    },
+    nameInput(e) {
+        this.setData ({
+            name: e.detail.value
+        })
+    },
+    sexSelect(e) {
+        this.setData ({
+            sex: e.detail.value
+        })
+    },
+    birthSelect(e) {
+        this.setData ({
+            birth: e.detail.value
+        })
+    },
+    selectEduBg(e) {
+        this.setData ({
+            eduBgIndex: e.detail.value,
+            edubg: this.data.eduBg[e.detail.value]
+        })
+    },
+    selectWorkExp(e) {
+        this.setData ({
+            workExpIndex: e.detail.value,
+            workexp: this.data.workExp[e.detail.value]
+        })
+    },
+    numberInput(e) {
+        this.setData ({
+            phone: e.detail.value
+        })
+    },
+    addressInput(e) {
+        this.setData ({
+            address: e.detail.value
+        })
+    },
 })

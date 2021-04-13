@@ -1,20 +1,15 @@
-
 <view class="box">
-  <view class="ava">
-    <open-data type="userAvatarUrl"></open-data>
-  </view>
-  <view class="info">
-    <view class="name">
-      <open-data type="userNickName" lang="zh_CN"></open-data>
+    <!-- 如果缓存中有头像URL和微信名则展示此模块 -->
+    <view class="userinfo" wx:if="{{avatarUrl}}">
+        <image src="{{avatarUrl}}" bindtap="getUserInfo" />
+        <view>{{wxName}}</view>
     </view>
-    <view class="sign">
-      <textarea placeholder="请输入您的个性签名" type="text" maxlength="25" bindblur="getSign"/>
+    <!-- 如果缓存中无头像URL或微信名将展示此按钮 -->
+    <button wx:else bindtap="getUserInfo" type="primary">获取用户信息</button>
+    <!-- 功能模块 -->
+    <view class="feature" wx:if="{{avatarUrl}}">
+        <block wx:for="{{feature}}" wx:key="index">
+            <navigator url="{{item}}">{{index}}</navigator>
+        </block>
     </view>
-  </view>
-</view>
-
-<view class="box" wx:for="{{menu}}">
-  <navigator class="{{index}}" url='{{item[1]}}'>
-    <view>{{item[0]}}</view>
-  </navigator>
 </view>

@@ -6,7 +6,8 @@
     "pages/admin/admin",
     "pages/publishment/publishment",
     "pages/eula/eula",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/ifresume/ifresume"
     
   ],
   "window": {

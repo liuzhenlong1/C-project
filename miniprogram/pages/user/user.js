@@ -1,19 +1,46 @@
-// pages/user/user.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    menu:{
-      process: ['求职进程', 'url'],
-      resum:['我的简历', '../resume/resume'],
-      management:['管理员登录', '../admin/admin'],
-      refeed:['反馈','url'],
-      connect:['在线联系', 'url'],
+Page ({
+    data: {
+        feature: {
+            "求职进程": "url",
+            "我的简历": "../ifresume/ifresume",
+            "客服联系": "url",
+            "管理员登录": "../admin/admin",
+            "BUG反馈": "url"
+        }
+    },
+    // 弹出授权界面，获取用户资料
+    getUserInfo() {
+        const that = this
+        wx.getUserProfile ({
+            desc: "用于完善用户资料",
+            // 同意授权
+            success(res) {
+                let i = res.userInfo
+                that.setData ({
+                    avatarUrl: i.avatarUrl,
+                    wxName: i.nickName
+                })
+                // 将头像URL和微信名写进缓存
+                wx.setStorageSync("avatarUrl", that.data.avatarUrl)
+                wx.setStorageSync("wxName", that.data.wxName)
+            },
+            // 拒绝授权
+            fail() {
+                that.setData ({
+                    avatarUrl: false
+                })
+            }
+        })
+    },
+    onLoad() {
+        // 从缓存读取头像URL和微信名
+        const avatarUrl = wx.getStorageSync("avatarUrl")
+        const wxName = wx.getStorageSync("wxName")
+        if(avatarUrl || wxName) {
+            this.setData ({
+                avatarUrl,
+                wxName
+            })
+        }
     }
-  },
-  onGotUserInfo: function (e) {
-    console.log("nickname=" + e.detail.userInfo.nickName);
-  }
 })
