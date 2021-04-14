@@ -1,10 +1,7 @@
 {
   "pages": [
-<<<<<<< Updated upstream
     "pages/user/user",
-=======
     "pages/progess/process",
->>>>>>> Stashed changes
     "pages/index/index",
     "pages/resume/resume",
     "pages/admin/admin",
