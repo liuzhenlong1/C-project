@@ -3,7 +3,7 @@ Page ({
         feature: {
             "求职进程": "url",
             "我的简历": "../ifresume/ifresume",
-            "客服联系": "url",
+            "联系我们": "url",
             "管理员登录": "../admin/admin",
             "BUG反馈": "url"
         }

@@ -1,18 +1,6 @@
-<!--
-    首页基本不改，按照现在的格式更改内容
-    1、工作分兼职和全职
-    2、展示的工作默认按照时间排序，成员可以选择排序
-    3、每一个工作项连接一个固定的页面，这个页面显示单个工作的详细，最后加上报名按钮
-    4、动态显示某一个工作的报名人数
-    5、首页中显示的每一个工作显示工作名称、工资、待遇
-    6、上拉刷新
-    7、最上方加一个搜索栏，用于查找职位/公司
--->
-
-
 <view class="banner">
-    <swiper autoplay circular indicator-dots indicator-color="rgba(255, 255, 255, .5)" indicator-active-color="#1e90ff" interval="2000">
-        <block wx:for="{{data_bannerurl}}" wx:key="*this">
+    <swiper autoplay circular indicator-dots indicator-color="rgba(255, 255, 255, .5)" indicator-active-color="#1e90ff" interval="3000">
+        <block wx:for="{{bannerUrl}}" wx:key="*this">
             <swiper-item>
                 <image src="{{item}}" mode="widthFix" />
             </swiper-item>
@@ -22,8 +10,8 @@
 <view class="box">
     <text class="title">招聘简介</text>
     <view class="intro">
-        <text>{{data_intro}}</text>
-        <block wx:for="{{data_introtext}}" wx:key="*this">
+        <text>{{inTro}}</text>
+        <block wx:for="{{introText}}" wx:key="*this">
             <text wx:if="{{intromore}}">{{item}}</text>
         </block>
     </view>
@@ -33,26 +21,10 @@
     </view>
 </view>
 <view class="iconlist">
-    <block wx:for="{{data_iconlist}}" wx:key="index">
+    <block wx:for="{{iconList}}" wx:key="index">
         <navigator url="{{item[0]}}"><image src="{{item[1]}}" mode="widthFix" /><text>{{index}}</text></navigator>
     </block>
 </view>
 <view class="box">
-    <text class="title">价位选择</text>
-    <view class="classbox">
-        <block wx:for="{{data_classlist}}" wx:key="index">
-            <navigator url="{{item[0]}}" open-type="reLaunch">
-                <text class="classtitle">{{index}}</text>
-                <text>{{item[3]}}</text>
-                <view class="classtext">
-                    <text class="classinfo">{{item[2]}}</text>
-                    <image src="{{item[1]}}" mode="widthFix" />
-                </view>
-            </navigator>
-        </block>
-    </view>
-</view>
-<view class="contact">
-    <button type="primary" size="mini" bindtap="callBtn">电话联系</button>
-    <button type="primary" size="mini" plain open-type="contact">微信联系</button>
+    <text class="title">招聘岗位</text>
 </view>
