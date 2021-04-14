@@ -1,5 +1,5 @@
 <view class="box">
-    <text class="title">简历填写</text>
+    <text class="title">我的简历</text>
     <view class="item">
         <view class="item_left">姓名</view>
         <view class="item_right">
@@ -19,8 +19,8 @@
         <view class="item_left">出生日期</view>
         <view class="item_right">
             <picker mode="date" value="2000-06-15" start="1970-01-01" end="2010-12-31" bindchange="birthSelect">
-                <text wx:if="{{!date}}">点击选择出生日期</text>
-                <text wx:else>{{date}}</text>
+                <text wx:if="{{!birth}}">点击选择出生日期</text>
+                <text wx:else>{{birth}}</text>
             </picker>
         </view>
     </view>
@@ -43,7 +43,7 @@
         <view class="item_left">工作经验</view>
         <view class="item_right">
             <picker value="3" range="{{workExp}}" bindchange="selectWorkExp">
-                <text wx:if="{{!workExpIndex}}">请选择类似工作经验</text>
+                <text wx:if="{{!workExpIndex}}">请选择工作经验</text>
                 <text wx:else>{{workExp[workExpIndex]}}</text>
             </picker>
         </view>
@@ -55,13 +55,13 @@
         </view>
     </view>
     <view class="item">
-        <view class="item_left">家庭住址</view>
+        <view class="item_left">现在住址</view>
         <view class="item_right">
             <input placeholder="请输入详细地址" maxlength="40" type="text" confirm-type="done" bindblur="addressInput" />
         </view>
     </view>
     <view class="itembtn">
-        <button style="width:200rpx" type="primary">提交</button>
-        <button style="width:200rpx">重置</button>
+        <button style="width:200rpx" type="primary" form-type="submit">提交</button>
+        <button style="width:200rpx" form-type="reset">重置</button>
     </view>
 </view>

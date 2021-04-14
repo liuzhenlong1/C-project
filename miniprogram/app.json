@@ -1,20 +1,24 @@
 {
   "pages": [
+<<<<<<< Updated upstream
     "pages/user/user",
+=======
+    "pages/progess/process",
+>>>>>>> Stashed changes
     "pages/index/index",
     "pages/resume/resume",
     "pages/admin/admin",
     "pages/publishment/publishment",
     "pages/eula/eula",
     "pages/result/result",
-    "pages/ifresume/ifresume"
-    
+    "pages/ifresume/ifresume",
+    "pages/feedBugs/feedBugs"
   ],
   "window": {
     "backgroundColor": "#fff",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#1e90ff",
-    "navigationBarTitleText": "行车者",
+    "navigationBarTitleText": "校园招聘",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": false
   },

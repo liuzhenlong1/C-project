@@ -8,10 +8,7 @@
     <text class="title">管理员权限</text>
     <view class="rights">
         <block wx:for="{{data_right}}" wx:key="index">
-            <navigator url="{{item[0]}}">
-                <image src="{{item[1]}}" mode="widthFix" />
-                <text>{{item}}</text>
-            </navigator>
+            <navigator url="{{item[1]}}"><text style="font-size:30rpx">{{item[0]}}</text></navigator>
         </block>
     </view>
 </view>

@@ -1,7 +1,7 @@
 Page ({
 
     data:({
-        data_right:["发布工作","查询成员"]
+        data_right:[["发布工作",""],["查询成员",""],["退出登录",""]]
     }),
 
     adminInput(e) {

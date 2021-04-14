@@ -11,6 +11,20 @@
 .login button {
     margin-top: 100rpx;
 }
-.right{
-    width: 400rpx
+.title{
+    border-left: 10rpx solid red;
+    display:felx;
+    color:red
+}
+.rights{
+    margin-top: 50rpx;
+}
+.rights navigator{
+    text-align: center;
+    color: yellow;
+    margin: 30rpx auto;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: red;
+    border-radius: 40rpx;
 }

@@ -1,0 +1,23 @@
+<!--
+  作用：
+  1 用户可以反馈小程序存在的不出，也可以反映存在的bug
+  2 提交对小程序的建议
+-->
+
+<view class="box">
+    <text class="title">反馈填写</text>
+
+    <form>
+        <view class="editBugs">
+            <textarea confirm-type="done" bindblur="getBugs"></textarea>
+        </view>
+        <!--
+            提交：提交完弹出提交完成提示，然后清空
+            取消：清空并退出
+        -->   
+        <view class="bugsBtn">
+            <button size="mini" style="width:180rpx;" type="primary" form-type="submit" bindtap="submitBugsBtn">提交</button>
+            <button size="mini" style="width:180rpx;" type="warn" form-type="submit" bindtap="backBugsBtn">返回</button>
+        </view>
+    </form>
+</view>

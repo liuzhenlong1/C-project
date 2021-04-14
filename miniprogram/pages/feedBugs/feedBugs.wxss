@@ -1,0 +1,10 @@
+.editBugs{
+  border: 2rpx solid rgba(0, 0, 255, 0.267) 
+}
+.bugsBtn{
+  display: flex;
+}
+
+.box view{
+  margin: 20rpx 0 auto;
+}
