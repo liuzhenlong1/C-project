@@ -1,0 +1,16 @@
+.tabs_title {
+    display: flex;
+    padding: 10rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+.title_content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active {
+    color: #1e90ff;
+    border-bottom: 2px solid currentColor;
+}

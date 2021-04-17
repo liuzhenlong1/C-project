@@ -2,5 +2,5 @@
   "usingComponents": {
     "Tabs": "../../components/Tabs/Tabs"
   },
-  "navigationBarTitleText": "管理入口"
+  "navigationBarTitleText": "求职进程"
 }

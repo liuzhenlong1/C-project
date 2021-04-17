@@ -3,16 +3,16 @@ Page ({
         tabs: [
             {
                 id: 0,
-                name: "发布工作",
+                name: "已上传",
                 isActive: true
             },
             {
                 id: 1,
-                name: "查询简历"
+                name: "已同意"
             },
             {
                 id: 2,
-                name: "首页修改"
+                name: "已拒绝"
             }
         ],
         index: 0

@@ -1,0 +1,4 @@
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
+<block wx:if="{{index == 0}}">已上传</block>
+<block wx:elif="{{index == 1}}">已同意</block>
+<block wx:else>已拒绝</block>

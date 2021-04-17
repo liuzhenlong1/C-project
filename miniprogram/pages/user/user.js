@@ -1,10 +1,10 @@
 Page ({
     data: {
         feature: {
-            "求职进程": "url",
+            "求职进程": "../schedule/schedule",
             "我的简历": "../ifresume/ifresume",
             "联系我们": "url",
-            "管理员登录": "../admin/admin",
+            "管理员入口": "../admin/admin",
             "BUG反馈": "../feedBugs/feedBugs"
         }
     },

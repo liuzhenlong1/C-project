@@ -1,14 +1,13 @@
 {
   "pages": [
     "pages/user/user",
-    "pages/progess/process",
-    "pages/index/index",
-    "pages/resume/resume",
+    "pages/schedule/schedule",
     "pages/admin/admin",
-    "pages/publishment/publishment",
-    "pages/eula/eula",
-    "pages/result/result",
     "pages/ifresume/ifresume",
+    "pages/resume/resume",
+    "pages/publishment/publishment",
+    "pages/index/index",
+    "pages/result/result",
     "pages/feedBugs/feedBugs"
   ],
   "window": {
