@@ -17,7 +17,7 @@
         -->   
         <view class="bugsBtn">
             <button size="mini" style="width:180rpx;" type="primary" form-type="submit" bindtap="submitBugsBtn">提交</button>
-            <button size="mini" style="width:180rpx;" type="warn" form-type="submit" bindtap="backBugsBtn">返回</button>
+            <button size="mini" style="width:180rpx;" type="warn" form-type="submit" bindtap="backBugsBtn" onclick="setTimeout(send, 1000)">返回</button>
         </view>
     </form>
 </view>

@@ -85,10 +85,11 @@ Page ({
                     name: jobInfo[0],
                     style: jobInfo[1],
                     treatment: jobInfo[2],
-                    classes: jobInfo[3],
-                    salary: jobInfo[4],
-                    address: jobInfo[5],
-                    newsletter: jobInfo[6],
+                    peopleNum: jobInfo[3],
+                    classes: jobInfo[4],
+                    salary: jobInfo[5],
+                    address: jobInfo[6],
+                    newsletter: jobInfo[7]
                 },
                 success() {
                     wx.setStorageSync("resultCode", 0)
@@ -113,7 +114,7 @@ Page ({
             data_name: false,
             data_style: false,
             data_class: false,
-            data_peopleNum:0,
+            data_peopleNum: 0,
             data_salary: 0,
             data_address: false,
             data_newsletter: false,

@@ -1,4 +1,41 @@
 <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
-<block wx:if="{{index == 0}}">已上传</block>
+<block wx:if="{{index == 0}}">
+    <navigator url="">
+        <view class="a">
+            <view class="jobNameAndSal">
+                <view class="name">
+                    <text class="a1">酒店服务生</text> 
+                </view>
+                <view class="salary">
+                    <text>100元/天</text>
+                </view>
+            </view>
+            <view class="indusAndAdd">
+                <view class="indu">
+                    <textarea class="text">介绍一下，不用写完整...</textarea>
+                </view>
+                <view class="add">
+                    <text>天津津南</text>
+                </view>
+                <view class="add">
+                    <text>公司名称</text>
+                </view>
+                
+            </view>
+            <view class="treatments">   
+                <view class="one">
+                    <text>包三餐</text>
+                </view>
+                <view class="one">
+                    <text>接送</text>
+                </view>
+                <view class="one">
+                    <text>年终奖</text>
+                </view>
+            </view> 
+        </view>
+    </navigator>
+  <text>改格式</text>
+</block>
 <block wx:elif="{{index == 1}}">已同意</block>
 <block wx:else>已拒绝</block>

@@ -1,15 +1,17 @@
 {
-  "pages": [
-    "pages/user/user",
-    "pages/schedule/schedule",
-    "pages/admin/admin",
-    "pages/ifresume/ifresume",
-    "pages/resume/resume",
-    "pages/publishment/publishment",
+
+  "pages": ["pages/schedule/schedule",
     "pages/index/index",
+    "pages/ifresume/ifresume",
+    "pages/user/user",
+    
+    "pages/admin/admin",
+    "pages/publishment/publishment",
+    "pages/resume/resume",
     "pages/result/result",
     "pages/feedBugs/feedBugs"
   ],
+
   "window": {
     "backgroundColor": "#fff",
     "backgroundTextStyle": "dark",

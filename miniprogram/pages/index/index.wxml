@@ -27,4 +27,9 @@
 </view>
 <view class="box">
     <text class="title">招聘岗位</text>
+    <view calss="menuJob">
+        <view calss="one"></view>
+        <view calss="one"></view>
+        <view calss="one"></view>
+    </view>
 </view>

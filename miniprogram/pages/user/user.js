@@ -20,7 +20,7 @@ Page ({
                     avatarUrl: i.avatarUrl,
                     wxName: i.nickName
                 })
-                // 将头像URL和微信名写进缓存
+                //将头像URL和微信名写进缓存
                 wx.setStorageSync("avatarUrl", that.data.avatarUrl)
                 wx.setStorageSync("wxName", that.data.wxName)
             },
