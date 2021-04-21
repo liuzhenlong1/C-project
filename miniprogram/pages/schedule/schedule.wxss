@@ -1,39 +1,43 @@
-.a{
-  width: 100%;
+.b{
+  padding: 15rpx;
+  margin-top: 20rpx;
+  margin: 20rpx auto 20rpx;
+  border: 2rpx solid #dcdcdc;
+  border-radius: 5px;
+  width: 90%;
   height: 200rpx;
-  background: pink;
 }
 .jobNameAndSal{
   display: flex;
   height: 30%;
   margin: 5rpx 20rpx auto 20rpx;
-  background: yellow;
+  border-bottom: 2rpx solid black;
 }
 .jobNameAndSal text{
   line-height: 50rpx;
 }
+.name text{
+  font-size: 35rpx;
+}
 .salary{
-  background: blue;
   margin-left: 300rpx;
 }
-.indusAndAdd{
+.Add{
+  margin-top: 20rpx;
   display: flex;
   height: 40%;
 }
-.indu{
-  width: 40%;
-  margin-left: 20rpx;
-  background: green;
-}
+
 .add{
   height: 60rpx;
   margin-left: 50rpx;
-  background: greenyellow;
 }
 .treatments{
   display: flex;
 }
 .one{
+  border: 2rpx solid black;
+  border-radius: 5rpx;
+  background: pink;
   margin: 10rpx 20rpx 0 20rpx;
-  background: red;
 }

@@ -1,6 +1,6 @@
 <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
 <block wx:if="{{index == 0}}">
-    <navigator url="">
+    <navigator class= "b" url="">
         <view class="a">
             <view class="jobNameAndSal">
                 <view class="name">
@@ -10,10 +10,7 @@
                     <text>100元/天</text>
                 </view>
             </view>
-            <view class="indusAndAdd">
-                <view class="indu">
-                    <textarea class="text">介绍一下，不用写完整...</textarea>
-                </view>
+            <view class="Add">
                 <view class="add">
                     <text>天津津南</text>
                 </view>
@@ -35,7 +32,6 @@
             </view> 
         </view>
     </navigator>
-  <text>改格式</text>
 </block>
 <block wx:elif="{{index == 1}}">已同意</block>
 <block wx:else>已拒绝</block>
