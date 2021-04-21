@@ -1,10 +1,11 @@
 {
 
-  "pages": ["pages/schedule/schedule",
+  "pages": [
     "pages/index/index",
+    "pages/jobDetail/jobDetail",
+    "pages/schedule/schedule",
     "pages/ifresume/ifresume",
     "pages/user/user",
-    
     "pages/admin/admin",
     "pages/publishment/publishment",
     "pages/resume/resume",

@@ -3,7 +3,7 @@
   margin-top: 20rpx;
   margin: 20rpx auto 20rpx;
   border: 2rpx solid #dcdcdc;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 90%;
   height: 200rpx;
 }
@@ -22,12 +22,24 @@
 .salary{
   margin-left: 300rpx;
 }
-.Add{
+.salary text{
+  color: red;
+}
+.companyAndAdd{
+  display:flex;
+}
+.company{
+  width: 65%;
+  margin: 20rpx;
+}
+.companyAndAdd text{
+  color: gray;
+}
+.add{
   margin-top: 20rpx;
   display: flex;
   height: 40%;
 }
-
 .add{
   height: 60rpx;
   margin-left: 50rpx;
@@ -36,8 +48,11 @@
   display: flex;
 }
 .one{
-  border: 2rpx solid black;
+  border: 2rpx solid #dcdcdc;
   border-radius: 5rpx;
-  background: pink;
   margin: 10rpx 20rpx 0 20rpx;
+}
+.one text{
+  font-size: 30rpx;
+  color: orange;
 }

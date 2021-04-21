@@ -1,6 +1,6 @@
 <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
 <block wx:if="{{index == 0}}">
-    <navigator class= "b" url="">
+    <navigator class= "b" url="../jobDetail/jobDetail">
         <view class="a">
             <view class="jobNameAndSal">
                 <view class="name">
@@ -10,14 +10,13 @@
                     <text>100元/天</text>
                 </view>
             </view>
-            <view class="Add">
+            <view class="companyAndAdd">
+                <view class="company">
+                    <text>公司名称：天津职业技术师范大学</text>
+                </view>
                 <view class="add">
                     <text>天津津南</text>
-                </view>
-                <view class="add">
-                    <text>公司名称</text>
-                </view>
-                
+                </view>  
             </view>
             <view class="treatments">   
                 <view class="one">

@@ -25,11 +25,39 @@
         <navigator url="{{item[0]}}"><image src="{{item[1]}}" mode="widthFix" /><text>{{index}}</text></navigator>
     </block>
 </view>
-<view class="box">
+<view class="careers">
     <text class="title">招聘岗位</text>
     <view calss="menuJob">
-        <view calss="one"></view>
-        <view calss="one"></view>
-        <view calss="one"></view>
+        <navigator class= "b" url="../jobDetail/jobDetail">
+        <view class="a">
+            <view class="jobNameAndSal">
+                <view class="name">
+                    <text class="a1">酒店服务生</text> 
+                </view>
+                <view class="salary">
+                    <text>100元/天</text>
+                </view>
+            </view>
+            <view class="companyAndAdd">
+                <view class="company">
+                    <text>公司名称：天津职业技术师范大学</text>
+                </view>
+                <view class="add">
+                    <text>天津津南</text>
+                </view>  
+            </view>
+            <view class="treatments">   
+                <view class="one">
+                    <text>包三餐</text>
+                </view>
+                <view class="one">
+                    <text>接送</text>
+                </view>
+                <view class="one">
+                    <text>年终奖</text>
+                </view>
+            </view> 
+        </view>
+    </navigator>
     </view>
 </view>

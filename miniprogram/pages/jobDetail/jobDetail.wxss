@@ -1,0 +1,50 @@
+.job{
+    border-bottom: 2rpx solid #dcdcdc;
+}
+
+.Title{
+    margin: 20rpx auto;
+}
+.Title text{
+    padding: 20rpx;
+    font-size: 50rpx;
+}
+.conments text{
+    padding: 20rpx;
+    color: orange;
+    font-size: 40rpx;
+}
+
+.treatments{
+    display: flex;
+    margin-bottom: 20rpx;
+  }
+  .one{
+    border: 2rpx solid #dcdcdc;
+    border-radius: 5rpx;
+    margin: 10rpx 20rpx 0 20rpx;
+  }
+  .one text{
+    font-size: 30rpx;
+    color: orange;
+  }
+
+  .career{
+      border-bottom: 2rpx solid #dcdcdc;
+      margin: 20rpx 15rpx auto 20rpx;
+  }
+  .hand text{
+    font-size: 40rpx;
+}
+
+.company{
+    border-bottom: 2rpx solid #dcdcdc;
+    margin: 20rpx 15rpx auto 20rpx;
+}
+.linker{
+    border-bottom: 2rpx solid #dcdcdc;
+    margin: 20rpx 15rpx auto 20rpx;
+}
+.space{
+    height: 200rpx;
+}
