@@ -17,11 +17,38 @@ Page ({
             "招聘流程":["null","/icon/list.png"],
             "报名须知":["null","/icon/warning.png"],
             "常见问题":["null","/icon/question.png"]
-        }
+        },
+        tabs:[
+            {
+                id: 0,
+                name: "推荐",
+                isActive: "true"
+            },
+            {
+                id: 1,
+                name: "兼职"
+            },
+            {
+                id: 2,
+                name: "全职"
+            }
+        ],
+        index: 0,
+        treatments: ["包三餐", "包接送", "年终奖", "有提成"]
     }),
+
     introMore() {
         this.setData ({
             intromore: !this.data.intromore
+        })
+    },
+    handleItemChange(e) {
+        const {index} = e.detail;
+        let {tabs} = this.data;
+        tabs.forEach ((v, i) => i === index ? v.isActive = true : v.isActive = false);
+        this.setData ({
+            tabs,
+            index
         })
     }
 })

@@ -7,28 +7,22 @@
         </block>
     </swiper>
 </view>
-<view class="box">
-    <text class="title">招聘简介</text>
-    <view class="intro">
-        <text>{{inTro}}</text>
-        <block wx:for="{{introText}}" wx:key="*this">
-            <text wx:if="{{intromore}}">{{item}}</text>
-        </block>
-    </view>
-    <view class="intro_more" bindtap="introMore">
-        <text wx:if="{{intromore}}">点击收起</text>
-        <text wx:else>点击展开</text>
-    </view>
-</view>
-<view class="iconlist">
+
+<view class="iconlist">  
     <block wx:for="{{iconList}}" wx:key="index">
-        <navigator url="{{item[0]}}"><image src="{{item[1]}}" mode="widthFix" /><text>{{index}}</text></navigator>
+        <navigator url="{{item[0]}}"><image src="{{item[1]}}" mode="widthFix" />
+            <text>{{index}}</text>
+        </navigator>
     </block>
 </view>
+
 <view class="careers">
     <text class="title">招聘岗位</text>
-    <view calss="menuJob">
-        <navigator class= "b" url="../jobDetail/jobDetail">
+</view>
+
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
+<block calss="menuJob" wx:if="{{index == 0}}"> 
+    <navigator class= "b" url="../jobDetail/jobDetail">
         <view class="a">
             <view class="jobNameAndSal">
                 <view class="name">
@@ -36,6 +30,9 @@
                 </view>
                 <view class="salary">
                     <text>100元/天</text>
+                </view>
+                <view class="partOrAllJob">
+                    <text>兼职</text>
                 </view>
             </view>
             <view class="companyAndAdd">
@@ -47,17 +44,12 @@
                 </view>  
             </view>
             <view class="treatments">   
-                <view class="one">
-                    <text>包三餐</text>
-                </view>
-                <view class="one">
-                    <text>接送</text>
-                </view>
-                <view class="one">
-                    <text>年终奖</text>
+                <view class="one" wx:for="{{treatments}}">
+                    <text>{{item}}</text>
                 </view>
             </view> 
         </view>
     </navigator>
-    </view>
-</view>
+</block>
+<block calss="menuJob" wx:if="{{index == 1}}"> </block>
+<view class="space"></view>

@@ -8,14 +8,8 @@
             <text class="salary">100元/天</text>
         </view>
         <view class="treatments">   
-            <view class="one">
-                <text>包三餐</text>
-            </view>
-            <view class="one">
-                <text>接送</text>
-            </view>
-            <view class="one">
-                <text>年终奖</text>
+            <view class="one" wx:for="{{treatment}}">
+                <text>{{item}}</text>
             </view>
         </view> 
     </view>
@@ -56,6 +50,7 @@
             <view class="p">
                 <text class="name">刘振龙</text>
                 <text class="tel"> 18822178171</text>
+                <button bindtap="linkboss">联系</button>
             </view>
         </view>
     </view>

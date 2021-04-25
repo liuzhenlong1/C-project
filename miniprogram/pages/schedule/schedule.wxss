@@ -5,7 +5,6 @@
   border: 2rpx solid #dcdcdc;
   border-radius: 10px;
   width: 90%;
-  height: 200rpx;
 }
 .jobNameAndSal{
   display: flex;

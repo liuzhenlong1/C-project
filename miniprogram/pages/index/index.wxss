@@ -4,25 +4,10 @@
 .banner image {
     width: 100%;
 }
-.intro {
-    margin-top: 20rpx;
-    margin-bottom: 20rpx;
-    text-indent: 2em;
-    font-size: 25rpx;
-}
-.intro text {
-    display: block;
-    margin-top: 20rpx;
-}
-.intro_more {
-    display: inline-block;
-    position: absolute;
-    right: 40rpx;
-    bottom: 15rpx;
-    font-size: 25rpx;
-    color: #1e90ff;
-}
 .iconlist {
+    margin-top: 15rpx;
+    border-top: 2rpx solid #dcdcdc;
+    border-bottom: 2rpx solid #dcdcdc;
     display: flex;
     justify-content: space-around;
 }
@@ -31,6 +16,7 @@
     text-align: center;
 }
 .iconlist navigator image {
+    margin-top: 10rpx;
     width: 60%;
 }
 .iconlist navigator text {
@@ -38,7 +24,10 @@
     font-size: 25rpx;
 }
 
-
+.careers{
+    border-top: 2rpx solid #dcdcdc;
+    margin-top: 20rpx;
+}
 .b{
     padding: 15rpx;
     margin-top: 20rpx;
@@ -46,54 +35,63 @@
     border: 2rpx solid #dcdcdc;
     border-radius: 10px;
     width: 90%;
-    height: 200rpx;
-  }
-  .jobNameAndSal{
+}
+.jobNameAndSal{
     display: flex;
     height: 30%;
     margin: 5rpx 20rpx auto 20rpx;
     border-bottom: 2rpx solid black;
-  }
-  .jobNameAndSal text{
+}
+.jobNameAndSal text{
     line-height: 50rpx;
-  }
-  .name text{
+}
+.name text{
     font-size: 35rpx;
-  }
-  .salary{
-    margin-left: 300rpx;
-  }
-  .salary text{
+}
+.salary{
+    margin-left: 250rpx;
+}
+.salary text{
     color: red;
-  }
-  .companyAndAdd{
+}
+.companyAndAdd{
     display:flex;
-  }
-  .company{
+}
+.company{
     width: 65%;
     margin: 20rpx;
-  }
-  .companyAndAdd text{
+}
+.companyAndAdd text{
     color: gray;
-  }
-  .add{
+}
+.add{
     margin-top: 20rpx;
     display: flex;
     height: 40%;
-  }
-  .add{
+}
+.add{
     height: 60rpx;
     margin-left: 50rpx;
-  }
-  .treatments{
+}
+.treatments{
     display: flex;
-  }
-  .one{
+}
+.one{
     border: 2rpx solid #dcdcdc;
     border-radius: 5rpx;
     margin: 10rpx 20rpx 0 20rpx;
-  }
-  .one text{
+}
+.one text{
+    width: 80%;
     font-size: 30rpx;
     color: orange;
-  }
+}
+.partOrAllJob{
+    margin-left: 10rpx;
+}
+.partOrAllJob text{
+    color: orange;
+}
+.space{
+    height: 200rpx;
+}
