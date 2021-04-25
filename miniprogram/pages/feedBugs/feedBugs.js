@@ -1,40 +1,22 @@
-// pages/feedBugs/feedBugs.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  },
-
-  submitBugsBtn(e){
-    const bugs = this.data.data_bugs
-    if(!bugs){
-      wx.showToast ({
-        title: "未填写！",
-        icon: "error"
-      })
+Page ({
+    data: {
+        bugInputLength: 0
+    },
+    bugInput(e) {
+        this.setData ({
+            buginput: e.detail.value,
+            bugInputLength: e.detail.value.length
+        })
+    },
+    bugSubmit() {
+        const {buginput} = this.data
+        if(!buginput) {
+            wx.showToast ({
+                title: "请输入反馈信息",
+                icon: "error"
+            })
+        }else {
+            console.log(buginput);
+        }
     }
-    else{
-      //发送给管理员/数据库
-      wx.navigateTo ({
-        url: "../result/result"
-      })
-    }
-  },
-  
-  backBugsBtn(e){
-    wx.reLaunch ({
-      url: "../user/user"
-  })
-  },
-
-  getBugs(e){
-    console.log(e)
-    this.setData({
-      data_bugs: e.detail.value
-    })
-  },
-
-  
 })

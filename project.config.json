@@ -38,7 +38,7 @@
     "minifyWXSS": true
   },
   "appid": "wx7fb4692583435363",
-  "projectname": "Project-Car",
+  "projectname": "CampusJOB",
   "libVersion": "2.14.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {

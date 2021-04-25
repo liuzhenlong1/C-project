@@ -1,4 +1,4 @@
-<view class="box">
+<view class="userbox">
     <!-- 如果缓存中有头像URL和微信名则展示此模块 -->
     <view class="userinfo" wx:if="{{avatarUrl}}">
         <image src="{{avatarUrl}}" bindtap="getUserInfo" />

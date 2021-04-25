@@ -1,18 +1,16 @@
 {
-
   "pages": [
+    "pages/user/user",
+    "pages/resume/resume",
     "pages/index/index",
     "pages/jobDetail/jobDetail",
     "pages/schedule/schedule",
     "pages/ifresume/ifresume",
-    "pages/user/user",
     "pages/admin/admin",
     "pages/publishment/publishment",
-    "pages/resume/resume",
     "pages/result/result",
     "pages/feedBugs/feedBugs"
   ],
-
   "window": {
     "backgroundColor": "#fff",
     "backgroundTextStyle": "dark",
@@ -37,6 +35,9 @@
       }
     ],
     "selectedColor": "#1e90ff"
+  },
+  "useExtendedLib": {
+    "weui": true
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

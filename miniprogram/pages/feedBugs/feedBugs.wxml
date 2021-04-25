@@ -1,23 +1,24 @@
-<!--
-  作用：
-  1 用户可以反馈小程序存在的不出，也可以反映存在的bug
-  2 提交对小程序的建议
--->
-
-<view class="box">
-    <text class="title">反馈填写</text>
-
-    <form>
-        <view class="editBugs">
-            <textarea confirm-type="done" bindblur="getBugs"></textarea>
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="weui-form">
+		<view class="weui-form__text-area">
+			<view class="weui-form__title">BUG反馈</view>
+			<view class="weui-form__desc">请在文本框中描述您在小程序内遇到的BUG</view>
+		</view>
+		<view class="weui-form__control-area">
+            <view class="weui-cells__group weui-cells__group_form">
+                <view class="weui-cells__title">问题描述</view>
+                <view class="weui-cells weui-cells_form">
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd">
+                            <textarea class="weui-textarea" placeholder="请描述您所发生的问题" placeholder-class="weui-input__placeholder" bindinput="bugInput" />
+                            <view class="weui-textarea-counter"><span>{{bugInputLength}}</span>/140</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
         </view>
-        <!--
-            提交：提交完弹出提交完成提示，然后清空
-            取消：清空并退出
-        -->   
-        <view class="bugsBtn">
-            <button size="mini" style="width:180rpx;" type="primary" form-type="submit" bindtap="submitBugsBtn">提交</button>
-            <button size="mini" style="width:180rpx;" type="warn" form-type="submit" bindtap="backBugsBtn" onclick="setTimeout(send, 1000)">返回</button>
+        <view class="weui-form__opr-area">
+            <button type="primary" bindtap="bugSubmit">提交</button>
         </view>
-    </form>
+	</view>
 </view>

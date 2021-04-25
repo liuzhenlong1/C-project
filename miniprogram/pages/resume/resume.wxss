@@ -1,34 +1,12 @@
-.item {
-    display: flex;
-    margin-top: 30rpx;
-}
-.item_left {
-    width: 30%;
-    height: 70rpx;
-    line-height: 70rpx;
-    font-size: 35rpx;
-    padding-left: 30rpx;
-}
-.item_right {
-    width: 70%;
-    height: 70rpx;
-    line-height: 70rpx;
-}
-.item_right input {
+.page {
     height: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #808080;
 }
-.item_right label {
-    display: inline-block;
-    width: 120rpx;
-    height: 100%;
-    line-height: 100%;
+.weui-label {
+    width: 4.1em;
 }
-.item_right picker {
+radio {
+    width: 150rpx;
+}
+picker text {
     color: #808080;
-}
-.itembtn {
-    display: flex;
-    margin-top: 50rpx;
 }
