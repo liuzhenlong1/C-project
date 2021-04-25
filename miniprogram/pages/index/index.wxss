@@ -6,8 +6,6 @@
 }
 .iconlist {
     margin-top: 15rpx;
-    border-top: 2rpx solid #dcdcdc;
-    border-bottom: 2rpx solid #dcdcdc;
     display: flex;
     justify-content: space-around;
 }
@@ -23,75 +21,62 @@
     display: block;
     font-size: 25rpx;
 }
-
-.careers{
-    border-top: 2rpx solid #dcdcdc;
-    margin-top: 20rpx;
+.item {
+    margin-top: 30rpx;
+    margin-bottom: 100rpx;
 }
-.b{
-    padding: 15rpx;
-    margin-top: 20rpx;
-    margin: 20rpx auto 20rpx;
-    border: 2rpx solid #dcdcdc;
-    border-radius: 10px;
-    width: 90%;
+.title {
+    line-height: 100rpx;
+    font-size: 40rpx;
+    color: #1e90ff;
+    border-bottom: 2px dotted currentColor;
+    text-align: center;
 }
-.jobNameAndSal{
-    display: flex;
-    height: 30%;
-    margin: 5rpx 20rpx auto 20rpx;
-    border-bottom: 2rpx solid black;
+.item_content {
+    width: 95%;
+    margin: 20rpx auto;
+    border-radius: 20px;
+    border: 2px solid #dcdcdc;
 }
-.jobNameAndSal text{
-    line-height: 50rpx;
+.item_company {
+    text-align: center;
+    line-height: 80rpx;
+    border-bottom: 2px solid #dcdcdc;
+    box-sizing: border-box;
 }
-.name text{
-    font-size: 35rpx;
+.item_jobs {
+    border-right: 1px solid #dcdcdc;
 }
-.salary{
-    margin-left: 250rpx;
+.item_salary {
+    border-left: 1px solid #dcdcdc;
 }
-.salary text{
+.item_jobs_salary {
     color: red;
+    display: inline-flex;
+    width: 50%;
+    height: 70rpx;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #dcdcdc;
+    box-sizing: border-box;
 }
-.companyAndAdd{
-    display:flex;
+.item_extra {
+    padding: 20rpx;
+    border-bottom: 2px solid #dcdcdc;
 }
-.company{
-    width: 65%;
-    margin: 20rpx;
-}
-.companyAndAdd text{
-    color: gray;
-}
-.add{
-    margin-top: 20rpx;
+.item_treatment {
     display: flex;
-    height: 40%;
+    height: 80rpx;
+    justify-content: space-around;
+    align-items: center;
 }
-.add{
-    height: 60rpx;
-    margin-left: 50rpx;
-}
-.treatments{
-    display: flex;
-}
-.one{
-    border: 2rpx solid #dcdcdc;
-    border-radius: 5rpx;
-    margin: 10rpx 20rpx 0 20rpx;
-}
-.one text{
-    width: 80%;
-    font-size: 30rpx;
-    color: orange;
-}
-.partOrAllJob{
-    margin-left: 10rpx;
-}
-.partOrAllJob text{
-    color: orange;
-}
-.space{
-    height: 200rpx;
+.item_treatmentitem {
+    font-size: 25rpx;
+    width: 100rpx;
+    text-align: center;
+    line-height: 50rpx;
+    color: white;
+    background-color: #1e90ff;
+    border-radius: 10px;
+    padding: 5px;
 }

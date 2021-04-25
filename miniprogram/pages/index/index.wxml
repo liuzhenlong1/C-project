@@ -7,7 +7,6 @@
         </block>
     </swiper>
 </view>
-
 <view class="iconlist">  
     <block wx:for="{{iconList}}" wx:key="index">
         <navigator url="{{item[0]}}"><image src="{{item[1]}}" mode="widthFix" />
@@ -15,41 +14,20 @@
         </navigator>
     </block>
 </view>
-
-<view class="careers">
-    <text class="title">招聘岗位</text>
-</view>
-
-<Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
-<block calss="menuJob" wx:if="{{index == 0}}"> 
-    <navigator class= "b" url="../jobDetail/jobDetail">
-        <view class="a">
-            <view class="jobNameAndSal">
-                <view class="name">
-                    <text class="a1">酒店服务生</text> 
-                </view>
-                <view class="salary">
-                    <text>100元/天</text>
-                </view>
-                <view class="partOrAllJob">
-                    <text>兼职</text>
-                </view>
+<view class="item">
+    <view class="title">『招聘信息』</view>
+    <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
+    <block wx:for="{{item.length}}" wx:for-item="x" wx:key="id">
+        <view class="item_content">
+            <view class="item_company">公司名：{{item[x].company}}</view>
+            <view class="item_jobs_salary item_jobs">岗位：{{item[x].jobs}}</view>
+            <view class="item_jobs_salary item_salary">薪资：{{item[x].salary}}</view>
+            <view class="item_extra">{{item[x].extra}}</view>
+            <view class="item_treatment">
+                <block wx:for="{{item[x].treatment.length}}" wx:for-item="y" wx:key="*this">
+                    <view class="item_treatmentitem">{{item[x].treatment[y]}}</view>
+                </block>
             </view>
-            <view class="companyAndAdd">
-                <view class="company">
-                    <text>公司名称：天津职业技术师范大学</text>
-                </view>
-                <view class="add">
-                    <text>天津津南</text>
-                </view>  
-            </view>
-            <view class="treatments">   
-                <view class="one" wx:for="{{treatments}}">
-                    <text>{{item}}</text>
-                </view>
-            </view> 
         </view>
-    </navigator>
-</block>
-<block calss="menuJob" wx:if="{{index == 1}}"> </block>
-<view class="space"></view>
+    </block>
+</view>

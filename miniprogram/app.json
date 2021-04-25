@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/user/user",
     "pages/resume/resume",
-    "pages/index/index",
     "pages/jobDetail/jobDetail",
     "pages/schedule/schedule",
     "pages/ifresume/ifresume",
