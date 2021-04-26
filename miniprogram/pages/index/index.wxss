@@ -23,7 +23,7 @@
 }
 .item {
     margin-top: 30rpx;
-    margin-bottom: 100rpx;
+    padding-bottom: 100rpx;
 }
 .title {
     line-height: 100rpx;
