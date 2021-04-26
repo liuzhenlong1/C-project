@@ -30,39 +30,40 @@ Page ({
                 address: "天津津南区大沽南路1310号",
                 jobs: "CEO",
                 nature: "全职",
-                salary: "50000-100000",
+                salary: "500000/年",
                 treatment: ["包吃住", "五险一金", "专车司机"],
                 extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
             },
             {
-                id: 1619358194446,
+                id: 1619358194422,
                 company: "天津职业技术师范大学",
                 address: "天津津南区大沽南路1310号",
                 jobs: "CFO",
                 nature: "全职",
-                salary: "50000-100000",
+                salary: "100000/年",
                 treatment: ["包吃住", "五险一金", "专车司机"],
                 extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
             },
         ],
         item2: [
             {
-                id: 1619358195555,
+                id: 1619358125555,
                 company: "天津职业技术师范大学",
                 address: "天津津南区大沽南路1310号",
                 jobs: "厨师",
                 nature: "兼职",
-                salary: "5000-10000",
-                treatment: ["五险一金", "包吃"],
+                salary: "100/天",
+                treatment: ["包吃", "五险一金"],
                 extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
-            },{
-                id: 1619358195555,
+            },
+            {
+                id: 1619324295524,
                 company: "天津职业技术师范大学",
                 address: "天津津南区大沽南路1310号",
                 jobs: "保安",
                 nature: "兼职",
-                salary: "5000-10000",
-                treatment: ["五险一金", "包吃", "饭补"],
+                salary: "120/天",
+                treatment: ["包吃", "五险一金", "车补"],
                 extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
             }
         ]
@@ -83,6 +84,15 @@ Page ({
             this.setData ({
                 item: this.data.item2
             })
+        }
+    },
+    itemClick(e) {
+        const itemIndex = e.currentTarget.dataset.index
+        if(this.data.index == 0) {
+            console.log(this.data.item1[itemIndex].id);
+        }else {
+            console.log(this.data.item2[itemIndex].id);
+
         }
     },
     onLoad() {

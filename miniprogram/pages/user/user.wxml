@@ -6,10 +6,10 @@
     </view>
     <!-- 如果缓存中无头像URL或微信名将展示此按钮 -->
     <button wx:else bindtap="getUserInfo" type="primary">获取用户信息</button>
-    <!-- 功能模块 -->
-    <view class="feature" wx:if="{{avatarUrl}}">
-        <block wx:for="{{feature}}" wx:key="index">
-            <navigator url="{{item}}">{{index}}</navigator>
-        </block>
-    </view>
+</view>
+<!-- 功能模块 -->
+<view class="feature" wx:if="{{avatarUrl}}">
+    <block wx:for="{{feature}}" wx:key="index">
+        <navigator url="{{item}}">{{index}}</navigator>
+    </block>
 </view>

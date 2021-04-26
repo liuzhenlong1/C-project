@@ -1,6 +1,5 @@
-<Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
-<block wx:if="{{index == 0}}">
-    <navigator url="../publishment/publishment">fdsfsdf</navigator>
-</block>
-<block wx:elif="{{index == 1}}">查询简历</block>
-<block wx:else>首页修改</block>
+<view class="feature">
+    <block wx:for="{{feature}}" wx:key="index">
+        <navigator url="{{item}}">{{index}}</navigator>
+    </block>
+</view>

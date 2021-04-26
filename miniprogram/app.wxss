@@ -1,0 +1,13 @@
+.feature {
+    margin-top: 50rpx;
+}
+.feature navigator {
+    text-align: center;
+    color: white;
+    margin: 30rpx auto;
+    width: 70%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #1e90ff;
+    border-radius: 50rpx;
+}
