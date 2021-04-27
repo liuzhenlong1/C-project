@@ -1,124 +1,100 @@
 Page ({
-
-    data:{
-        classArray:['日结','周结', '半月结', '月结'],
-        treatment:['包工作餐','包住宿','包接送','交通补助','有提成','有年终奖','其他']
+    data: {
+        salaryPickerArray: ["日", "月", "年"],
+        salaryWay: "月",
+        treatmentArray: ["包吃", "包住", "五险一金", "接送", "提成", "年终奖"],
+        eduReqArray: ["无要求", "高中及以上", "专科及以上", "本科及以上", "研究生及以上"],
+        detailInfoLength: 0
     },
-    //工作名称
-    nameInput(e) {
+    // 获取公司名
+    companyInput(e) {
         this.setData ({
-            data_name: e.detail.value
+            company: e.detail.value
         })
     },
-    //工作类型
-    styleSelect(e) {
+    // 获取联系电话
+    telInput(e) {
         this.setData ({
-            data_style: e.detail.value
+            tel: e.detail.value
         })
     },
-    //待遇
-    checkboxChange(e){
-        this.setData({
-            data_treatment: e.detail.value
-        })
-    },
-    //工资发放类型
-    classSelect(e) {
+    // 获取公司位置
+    addressInput(e) {
         this.setData ({
-            data_class: e.detail.value
+            address: e.detail.value
         })
     },
-    //工资
-    salaryInput(e) {
+    // 获取岗位名
+    jobsInput(e) {
         this.setData ({
-            data_salary: e.detail.value
+            jobs: e.detail.value
         })
     },
-    //地址
-    addressInput(e){
-        this.setData({
-            data_address:e.detail.value
-        })
-    },
-    //简介
-    newsletterInput(e) {
+    // 获取薪资数目
+    salaryNumInput(e) {
         this.setData ({
-            data_newsletter: e.detail.value
+            salaryNum: e.detail.value
         })
     },
-    //人数
-    peopleInput(e){
-        this.setData({
-            data_peopleNum: e.detail.value
+    // 获取薪资结付类型，日/月/年
+    salaryPickerSelect(e) {
+        this.setData ({
+            salaryWay: this.data.salaryPickerArray[e.detail.value]
         })
     },
-
-    submitBtn() {
-        const name = this.data.data_name
-        const style = this.data.data_style
-        const classes = this.data.data_class
-        const treatment = this.data.data_treatment
-        const salary = this.data.data_salary
-        const address = this.data.data_address
-        const newsletter = this.data.data_newsletter
-        const peopleNum = this.data.data_peopleNum
-
-        if(!name || !style || !classes || !treatment || !salary || !address || !peopleNum) {
+    // 获取工作类型，兼职/全职
+    typeSelect(e) {
+        this.setData ({
+            type: e.detail.value
+        })
+    },
+    // 获取学历要求
+    eduReqSelect(e) {
+        this.setData ({
+            eduReq: this.data.eduReqArray[e.detail.value]
+        })
+    },
+    // 获取岗位待遇列表
+    treatmentChange(e) {
+        this.setData ({
+            treatment: e.detail.value
+        })
+    },
+    // 获取岗位详细信息
+    detailInfoInput(e) {
+        let detailInfoLength = e.detail.value.length
+        this.setData ({
+            detailInfoLength,
+            detailInfo: e.detail.value
+        })
+    },
+    submit() {
+        const {company} = this.data
+        const {tel} = this.data
+        const {address} = this.data
+        const {jobs} = this.data
+        const {salaryNum} = this.data
+        const {salaryWay} = this.data
+        const {type} = this.data
+        const {eduReq} = this.data
+        const {treatment} = this.data
+        const {detailInfo} = this.data
+        if(!company || !tel || !address || !jobs || !salaryNum || !type || !eduReq || !treatment || !detailInfo) {
             wx.showToast ({
-                title: "信息未填写完整！",
+                title: "请完整填写",
                 icon: "error"
             })
         }else {
-            const jobInfo = []
-            jobInfo.push(name, style, treatment, peopleNum, classes, salary, address, newsletter)
-            try {
-                wx.setStorageSync("jobs", jobInfo)
-            }catch(e) {
-                wx.showToast ({
-                    title: "信息存储失败",
-                    icon: "error"
-                })
-            }
-            const db = wx.cloud.database()
-            db.collection("jobs").add ({
-                data:{
-                    name: jobInfo[0],
-                    style: jobInfo[1],
-                    treatment: jobInfo[2],
-                    peopleNum: jobInfo[3],
-                    classes: jobInfo[4],
-                    salary: jobInfo[5],
-                    address: jobInfo[6],
-                    newsletter: jobInfo[7]
-                },
-                success() {
-                    wx.setStorageSync("resultCode", 0)
-                    wx.navigateTo ({
-                        url: "../result/result"
-                    })
-                },
-                fail() {
-                    wx.setStorageSync("resultCode", 1)
-                    wx.navigateTo ({
-                        url: "../result/result"
-                    })
-                }
-            })
-            wx.navigateTo ({
-                url: "../eula/eula"
-            })
+            const salary = salaryNum + "/" + salaryWay
+            console.log(company);
+            console.log(tel);
+            console.log(address);
+            console.log(jobs);
+            console.log(salary);
+            console.log(type);
+            console.log(eduReq);
+            console.log(treatment);
+            console.log(detailInfo);
         }
-    },
-    resetBtn() {
-        this.setData ({
-            data_name: false,
-            data_style: false,
-            data_class: false,
-            data_peopleNum: 0,
-            data_salary: 0,
-            data_address: false,
-            data_newsletter: false,
-            data_treatment: false,
-        })
     }
 })

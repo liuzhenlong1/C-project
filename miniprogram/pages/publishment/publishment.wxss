@@ -1,32 +1,12 @@
-.signupbox view {
-    margin-top: 30rpx;
+radio-group {
     display: flex;
 }
-.signupbox text {
-    width: 30%;
-    line-height: 80rpx;
-    font-size: 35rpx;
+radio-group radio {
+    flex: auto;
 }
-.signupbox input {
-    width: 70%;
-    height: 80rpx;
-    border-bottom: 1px solid #808080;
-}
-.signupbox radio-group {
-    width: 70%;
-}
-
-.signupbox checkbox-group {
-    width: 70%;
-}
-.signupbox label {
-    display: inline-block;
-    width: 40%;
-    line-height: 80rpx;
-}
-
-.signupbox textarea {
-    width: 70%;
-    border: 2rpx solid black;
-    border-radius: 2%;
+.salary_picker {
+    flex: auto;
+    border-radius: 10rpx;
+    background-color: #dcdcdc;
+    padding: 0 20rpx;
 }

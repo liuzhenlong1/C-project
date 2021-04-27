@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/publishment/publishment",
     "pages/index/index",
     "pages/user/user",
+    "pages/admin/admin",
     "pages/resume/resume",
     "pages/jobDetail/jobDetail",
     "pages/schedule/schedule",
     "pages/ifresume/ifresume",
-    "pages/admin/admin",
-    "pages/publishment/publishment",
     "pages/result/result",
     "pages/feedBugs/feedBugs"
   ],
