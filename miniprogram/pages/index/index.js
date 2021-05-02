@@ -32,6 +32,7 @@ Page ({
                 nature: "全职",
                 salary: "500000/年",
                 treatment: ["包吃住", "五险一金", "专车司机"],
+                url: "../jobDetail/jobDetail",
                 extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
             },
             {

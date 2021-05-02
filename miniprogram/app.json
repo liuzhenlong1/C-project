@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/publishment/publishment",
+    
     "pages/index/index",
+    "pages/publishment/publishment",
     "pages/user/user",
-    "pages/admin/admin",
+    "pages/admin/admin ",
     "pages/resume/resume",
     "pages/jobDetail/jobDetail",
     "pages/schedule/schedule",
