@@ -10,7 +10,7 @@
                 <view class="weui-cells weui-cells_form">
                     <view class="weui-cell">
                         <view class="weui-cell__bd">
-                            <textarea class="weui-textarea" placeholder="请描述您所发生的问题" placeholder-class="weui-input__placeholder" bindinput="bugInput" />
+                            <textarea class="weui-textarea" placeholder="请描述您所发生的问题" placeholder-class="weui-input__placeholder" bindinput="bugInput" >{{bug}}</textarea>
                             <view class="weui-textarea-counter"><span>{{bugInputLength}}</span>/140</view>
                         </view>
                     </view>

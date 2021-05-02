@@ -1,45 +1,44 @@
 {
-  "pages": [
-    
-    "pages/index/index",
-    "pages/publishment/publishment",
-    "pages/user/user",
-    "pages/admin/admin ",
-    "pages/resume/resume",
-    "pages/jobDetail/jobDetail",
-    "pages/schedule/schedule",
-    "pages/ifresume/ifresume",
-    "pages/result/result",
-    "pages/feedBugs/feedBugs"
-  ],
-  "window": {
-    "backgroundColor": "#fff",
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#1e90ff",
-    "navigationBarTitleText": "校园招聘",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": false
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "icon/home.png",
-        "selectedIconPath": "icon/_home.png"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "text": "用户",
-        "iconPath": "icon/admin.png",
-        "selectedIconPath": "icon/_admin.png"
-      }
+    "pages": [
+        "pages/index/index",
+        "pages/admin/admin",
+        "pages/feedBugs/feedBugs",
+        "pages/user/user",
+        "pages/publishment/publishment",
+        "pages/resume/resume",
+        "pages/jobDetail/jobDetail",
+        "pages/schedule/schedule",
+        "pages/ifresume/ifresume",
+        "pages/result/result"
     ],
-    "selectedColor": "#1e90ff"
-  },
-  "useExtendedLib": {
-    "weui": true
-  },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+    "window": {
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#1e90ff",
+        "navigationBarTitleText": "校园招聘",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "icon/home.png",
+            "selectedIconPath": "icon/_home.png"
+        },
+        {
+            "pagePath": "pages/user/user",
+            "text": "用户",
+            "iconPath": "icon/admin.png",
+            "selectedIconPath": "icon/_admin.png"
+        }
+        ],
+        "selectedColor": "#1e90ff"
+    },
+    "useExtendedLib": {
+        "weui": true
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
 }

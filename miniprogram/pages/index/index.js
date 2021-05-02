@@ -22,6 +22,7 @@ Page ({
                 name: "兼职"
             }
         ],
+        url: "../jobDetail/jobDetail",
         index: 0,
         item1: [
             {
@@ -32,7 +33,6 @@ Page ({
                 nature: "全职",
                 salary: "500000/年",
                 treatment: ["包吃住", "五险一金", "专车司机"],
-                url: "../jobDetail/jobDetail",
                 extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
             },
             {
@@ -93,7 +93,6 @@ Page ({
             console.log(this.data.item1[itemIndex].id);
         }else {
             console.log(this.data.item2[itemIndex].id);
-
         }
     },
     onLoad() {

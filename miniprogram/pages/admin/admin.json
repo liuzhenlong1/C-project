@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "Tabs": "../../components/Tabs/Tabs"
   },
   "navigationBarTitleText": "超级用户"
 }
