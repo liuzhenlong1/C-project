@@ -1,4 +1,5 @@
 Page ({
+  
     data: ({
         bannerUrl: [
             "/images/banner1.jpg",
@@ -88,16 +89,33 @@ Page ({
         }
     },
     itemClick(e) {
+        const item = []
         const itemIndex = e.currentTarget.dataset.index
         if(this.data.index == 0) {
             console.log(this.data.item1[itemIndex].id);
         }else {
-            console.log(this.data.item2[itemIndex].id);
+            console.log(this.data.item2[itemIndex].id);   
         }
     },
     onLoad() {
-        this.setData ({
-            item: this.data.item1
+        const db = wx.cloud.database()
+        const that = this
+        db.collection('Jobs').get({
+            success(res){
+                for(var i = 0; i < res.data.length; i++){
+                    that.data.item1 = that.data.item1.concat({
+                        "company": res.data[i].company_name,
+                        "jobs":  res.data[i].job_name,
+                        "salary": res.data[i].job_salary,
+                        "treatment": res.data[i].job_treatment,
+                        "nature": res.data[i].job_type,
+                        "extra": res.data[i].job_detailInfo,
+                    })
+                }
+                this.setData({
+                    item: that.data.item1
+                })
+            },
         })
     }
 })

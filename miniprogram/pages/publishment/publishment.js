@@ -85,16 +85,58 @@ Page ({
                 icon: "error"
             })
         }else {
-            const salary = salaryNum + "/" + salaryWay
-            console.log(company);
-            console.log(tel);
-            console.log(address);
-            console.log(jobs);
-            console.log(salary);
-            console.log(type);
-            console.log(eduReq);
-            console.log(treatment);
-            console.log(detailInfo);
+            const salary = salaryNum + "/" + salaryWay;
+
+            var time = Date.parse(new Date());
+            time = time / 1000;
+            var n = time * 1000;
+            var date = new Date(n);
+            var Y = date.getFullYear();
+            var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+            var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            
+            const Job_id = Y + M + D + h + m + s;//时间作为公司的唯一标识
+            const times = Y + '/' + M + '/' + D + ' ' + h + ':' + m + ':' + s;
+            
+            const db = wx.cloud.database()
+            db.collection('Jobs').add({
+                data: {
+                    company_name: company,
+                    job_id: Job_id,
+                    job_name: jobs,
+                    job_salary: salary,
+                    job_type: type,
+                    job_eduReq: eduReq,
+                    job_treatment: treatment,
+                    job_detailInfo: detailInfo,
+                    publishment_time: times
+                },
+                success: res=>{
+                    wx.showToast({
+                      title: '发布成功',
+                      icon: 'success'
+                    })
+                },
+                fail: err=>{
+                    wx.showToast({
+                      title: '发布失败',
+                      icon: 'none'
+                    })
+                }
+            })
+            db.collection('Companys').add({
+                data:{
+                    company_name: company,
+                    company_address: address,
+                    company_tel: tel
+                },
+                fail: err=>{
+                    console.log("老成员")
+                }
+            })
         }
     }
 })
