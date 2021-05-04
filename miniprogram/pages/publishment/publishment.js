@@ -87,54 +87,54 @@ Page ({
         }else {
             const salary = salaryNum + "/" + salaryWay;
 
-            var time = Date.parse(new Date());
+            let time = Date.parse(new Date());
             time = time / 1000;
-            var n = time * 1000;
-            var date = new Date(n);
-            var Y = date.getFullYear();
-            var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-            var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
-            var h = date.getHours();
-            var m = date.getMinutes();
-            var s = date.getSeconds();
+            let n = time * 1000;
+            let date = new Date(n);
+            let Y = date.getFullYear();
+            let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+            let D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
             
-            const Job_id = Y + M + D + h + m + s;//时间作为公司的唯一标识
+            const id = Y + M + D + h + m + s;//时间作为公司的唯一标识
             const times = Y + '/' + M + '/' + D + ' ' + h + ':' + m + ':' + s;
             
             const db = wx.cloud.database()
-            db.collection('Jobs').add({
+            db.collection("Jobs").add({
                 data: {
-                    company_name: company,
-                    job_id: Job_id,
-                    job_name: jobs,
-                    job_salary: salary,
-                    job_type: type,
-                    job_eduReq: eduReq,
-                    job_treatment: treatment,
-                    job_detailInfo: detailInfo,
-                    publishment_time: times
+                    company: company,
+                    id: id,
+                    jobs: jobs,
+                    salary: salary,
+                    type: type,
+                    eduReq: eduReq,
+                    treatment: treatment,
+                    detailInfo: detailInfo,
+                    time: times
                 },
-                success: res=>{
+                success() {
                     wx.showToast({
                       title: '发布成功',
                       icon: 'success'
                     })
+                    setTimeout(function () {
+                        wx.navigateBack()
+                    }, 500)
                 },
-                fail: err=>{
+                fail() {
                     wx.showToast({
                       title: '发布失败',
                       icon: 'none'
                     })
                 }
             })
-            db.collection('Companys').add({
-                data:{
-                    company_name: company,
-                    company_address: address,
-                    company_tel: tel
-                },
-                fail: err=>{
-                    console.log("老成员")
+            db.collection("Companys").add({
+                data: {
+                    company: company,
+                    address: address,
+                    tel: tel
                 }
             })
         }

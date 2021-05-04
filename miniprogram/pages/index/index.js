@@ -1,5 +1,4 @@
 Page ({
-  
     data: ({
         bannerUrl: [
             "/images/banner1.jpg",
@@ -24,51 +23,7 @@ Page ({
             }
         ],
         url: "null",
-        index: 0,
-        item1: [
-            {
-                id: 1619358194446,
-                company: "天津职业技术师范大学",
-                address: "天津津南区大沽南路1310号",
-                jobs: "CEO",
-                nature: "全职",
-                salary: "500000/年",
-                treatment: ["包吃住", "五险一金", "专车司机"],
-                extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
-            },
-            {
-                id: 1619358194422,
-                company: "天津财经大学",
-                address: "天津津南区大沽南路不知道多少号",
-                jobs: "CFO",
-                nature: "全职",
-                salary: "100000/年",
-                treatment: ["包吃住", "五险一金", "专车司机"],
-                extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
-            },
-        ],
-        item2: [
-            {
-                id: 1619358125555,
-                company: "天津职业技术师范大学",
-                address: "天津津南区大沽南路1310号",
-                jobs: "厨师",
-                nature: "兼职",
-                salary: "100/天",
-                treatment: ["包吃", "五险一金"],
-                extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
-            },
-            {
-                id: 1619324295524,
-                company: "天津财经大学",
-                address: "天津津南区大沽南路不知道多少号",
-                jobs: "保安",
-                nature: "兼职",
-                salary: "120/天",
-                treatment: ["包吃", "五险一金", "车补"],
-                extra: "只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙，只要刘振龙"
-            }
-        ]
+        index: 0
     }),
     handleItemChange(e) {
         const {index} = e.detail;
@@ -96,15 +51,30 @@ Page ({
             console.log(this.data.item2[itemIndex].id);   
         }
     },
-    onLoad() {
+    getItem() {
+        const that = this
         const db = wx.cloud.database()
-        this.setData ({
-            item: this.data.item1
-        })
-        db.collection("Jobs").get ({
+        db.collection("Jobs").where ({
+            "type": "全职"
+        }).get ({
             success(res) {
-                console.log(res.data);
+                that.setData ({
+                    item1: res.data,
+                    item: res.data
+                })
             }
         })
+        db.collection("Jobs").where ({
+            "type": "兼职"
+        }).get ({
+            success(res) {
+                that.setData ({
+                    item2: res.data
+                })
+            }
+        })
+    },
+    onLoad() {
+        this.getItem()
     }
 })

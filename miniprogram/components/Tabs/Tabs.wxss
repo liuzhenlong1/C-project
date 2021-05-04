@@ -1,6 +1,8 @@
+.tabs {
+    box-shadow: 0 5rpx 10rpx #808080;
+}
 .tabs_title {
     display: flex;
-    padding: 10rpx;
     height: 100rpx;
     box-sizing: border-box;
 }

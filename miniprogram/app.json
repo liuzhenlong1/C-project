@@ -6,10 +6,10 @@
         "pages/user/user",
         "pages/publishment/publishment",
         "pages/resume/resume",
-        "pages/jobDetail/jobDetail",
         "pages/schedule/schedule",
         "pages/ifresume/ifresume",
-        "pages/result/result"
+        "pages/result/result",
+        "pages/jobdetail/jobdetail"
     ],
     "window": {
         "backgroundColor": "#fff",

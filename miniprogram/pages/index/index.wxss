@@ -33,9 +33,11 @@
     text-align: center;
 }
 .item_content {
-    margin: 20rpx auto;
+    width: 90%;
+    margin: 30rpx auto;
     padding: 20rpx;
     background-color: #f5f5f5;
+    box-shadow: 0 5rpx 20rpx #808080;
 }
 .item_jobs {
     line-height: 70rpx;
