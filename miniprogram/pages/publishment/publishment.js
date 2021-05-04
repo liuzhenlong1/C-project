@@ -78,8 +78,8 @@ Page ({
         const {type} = this.data
         const {eduReq} = this.data
         const {treatment} = this.data
-        const {detailInfo} = this.data
-        if(!company || !tel || !address || !jobs || !salaryNum || !type || !eduReq || !treatment || !detailInfo) {
+        const {extra} = this.data
+        if(!company || !tel || !address || !jobs || !salaryNum || !type || !eduReq || !treatment) {
             wx.showToast ({
                 title: "请完整填写",
                 icon: "error"
