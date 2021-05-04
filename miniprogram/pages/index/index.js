@@ -23,7 +23,7 @@ Page ({
                 name: "兼职"
             }
         ],
-        url: "../jobDetail/jobDetail",
+        url: "null",
         index: 0,
         item1: [
             {
@@ -89,7 +89,6 @@ Page ({
         }
     },
     itemClick(e) {
-        const item = []
         const itemIndex = e.currentTarget.dataset.index
         if(this.data.index == 0) {
             console.log(this.data.item1[itemIndex].id);
@@ -99,23 +98,13 @@ Page ({
     },
     onLoad() {
         const db = wx.cloud.database()
-        const that = this
-        db.collection('Jobs').get({
-            success(res){
-                for(var i = 0; i < res.data.length; i++){
-                    that.data.item1 = that.data.item1.concat({
-                        "company": res.data[i].company_name,
-                        "jobs":  res.data[i].job_name,
-                        "salary": res.data[i].job_salary,
-                        "treatment": res.data[i].job_treatment,
-                        "nature": res.data[i].job_type,
-                        "extra": res.data[i].job_detailInfo,
-                    })
-                }
-                this.setData({
-                    item: that.data.item1
-                })
-            },
+        this.setData ({
+            item: this.data.item1
+        })
+        db.collection("Jobs").get ({
+            success(res) {
+                console.log(res.data);
+            }
         })
     }
 })
