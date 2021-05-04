@@ -8,8 +8,7 @@
         "pages/resume/resume",
         "pages/schedule/schedule",
         "pages/ifresume/ifresume",
-        "pages/result/result",
-        "pages/jobdetail/jobdetail"
+        "pages/result/result"
     ],
     "window": {
         "backgroundColor": "#fff",
