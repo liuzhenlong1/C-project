@@ -111,11 +111,7 @@ Page ({
                     type: type,
                     eduReq: eduReq,
                     treatment: treatment,
-<<<<<<< HEAD
                     detailInfo: detailInfo,
-=======
-                    extra: extra,
->>>>>>> master
                     time: times
                 },
                 success() {
@@ -134,22 +130,11 @@ Page ({
                     })
                 }
             })
-<<<<<<< HEAD
             db.collection("Companys").add({
                 data: {
                     company: company,
                     address: address,
                     tel: tel
-=======
-            db.collection('Companys').add({
-                data:{
-                    company: company,
-                    address: address,
-                    tel: tel
-                },
-                fail: err=> {
-                    console.log(err);
->>>>>>> master
                 }
             })
         }

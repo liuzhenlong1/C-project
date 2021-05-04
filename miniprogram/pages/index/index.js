@@ -1,6 +1,3 @@
-const db = wx.cloud.database()
-const that = this
-
 Page ({
     data: ({
         bannerUrl: [
@@ -54,7 +51,6 @@ Page ({
             console.log(this.data.item2[itemIndex].id);   
         }
     },
-<<<<<<< HEAD
     getItem() {
         const that = this
         const db = wx.cloud.database()
@@ -80,32 +76,5 @@ Page ({
     },
     onLoad() {
         this.getItem()
-=======
-    getDatabase(){
-        const that = this
-        const db = wx.cloud.database()
-        var a = []
-        var b = []
-        db.collection('Jobs').get({
-            success(res){
-                for(var i = 0; i < res.data.length; i++){
-                   
-                    if(res.data[i].type == '全职'){
-                        a = a.concat(res.data[i])
-                    }else{ 
-                        b = b.concat(res.data[i])
-                    }
-                }
-                that.setData ({
-                    item1: a,
-                    item2: b,
-                    item: a
-                })
-            }
-        })
-    },
-    onLoad() {
-        this.getDatabase()
->>>>>>> master
     }
 })
