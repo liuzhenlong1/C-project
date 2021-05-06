@@ -1,0 +1,85 @@
+Page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #808080;
+}
+.page {
+    width: 95vw;
+    height: 95vh;
+    padding: 30rpx;
+    box-sizing: border-box;
+    border: 3px double #1e90ff;
+}
+.title {
+    color: #1e90ff;
+    line-height: 70rpx;
+    font-size: 35rpx;
+    padding-left: 30rpx;
+    border-left: 4px solid currentColor;
+}
+.job {
+    text-align: center;
+    font-size: 50rpx;
+    color: black;
+}
+.type {
+    color: red;
+    line-height: 60rpx;
+}
+.treatment {
+    display: flex;
+    height: 100rpx;
+    border-top: 1px solid #1e90ff;
+    border-bottom: 1px solid #1e90ff;
+    box-sizing: border-box;
+}
+.salary {
+    color: #1e90ff;
+    flex: auto;
+    text-align: center;
+    line-height: 100rpx;
+}
+.treatmentlist {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #1e90ff;
+    box-sizing: border-box;
+}
+.treatmentitem {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 20rpx;
+    padding: 10rpx;
+    margin-left: 10rpx;
+    background-color: #1e90ff;
+    border-radius: 10rpx;
+}
+.company {
+    line-height: 100rpx;
+}
+.tel {
+    height: 60rpx;
+    display: flex;
+    align-items:center;
+    position: relative;
+}
+.tel image {
+    width: 60rpx;
+    height: 100%;
+    position: absolute;
+    right: 50rpx;
+}
+.address {
+    padding-top: 20rpx;
+}
+.detail {
+    margin-top: 50rpx;
+}
+.edureq {
+    line-height: 100rpx;
+}

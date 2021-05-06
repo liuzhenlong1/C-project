@@ -45,11 +45,16 @@ Page ({
     },
     itemClick(e) {
         const itemIndex = e.currentTarget.dataset.index
+        var itemObj = {}
         if(this.data.index == 0) {
-            console.log(this.data.item1[itemIndex].id);
+            var itemObj = this.data.item[itemIndex]
         }else {
-            console.log(this.data.item2[itemIndex].id);   
+            var itemObj = this.data.item[itemIndex]
         }
+        wx.setStorageSync("itemObj", itemObj)
+        wx.navigateTo ({
+            url: "../jobdetail/jobdetail"
+        })
     },
     getItem() {
         const that = this

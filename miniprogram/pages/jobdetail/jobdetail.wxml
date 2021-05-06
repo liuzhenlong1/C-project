@@ -1,0 +1,21 @@
+<view class="page">
+    <view class="title">基本信息</view>
+    <view class="job">{{item.jobs}}</view>
+    <view class="type">{{item.type}}</view>
+    <view class="treatment">
+        <view class="salary">{{item.salary}}</view>
+        <view class="treatmentlist">
+            <block wx:for="{{item.treatment.length}}" wx:for-item="x" wx:key="*this">
+                <view class="treatmentitem" >{{item.treatment[x]}}</view>
+            </block>
+        </view>
+    </view>
+    <view class="company">{{item.company}}</view>
+    <view class="tel">{{companyInfo[0].tel}}<image src="../../icon/phone.png" mode="aspectFit" /></view>
+    <view class="address">{{companyInfo[0].address}}</view>
+    <view class="detail">
+        <view class="title">要求</view>
+    </view>
+    <view class="edureq">{{item.eduReq}}</view>
+    <view class="detailinfo">{{item.detailInfo}}</view>
+</view>

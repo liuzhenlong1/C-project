@@ -18,7 +18,7 @@
     <view class="title">『招聘信息』</view>
     <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
         <block wx:for="{{item.length}}" wx:for-item="x" wx:key="id">
-        <navigator url="{{url}}">
+        <navigator url="null">
             <view class="item_content" bindtap="itemClick" data-index="{{index}}">
                 <view class="item_jobs">{{item[x].jobs}}</view>
                 <view class="item_company">{{item[x].company}}</view>
