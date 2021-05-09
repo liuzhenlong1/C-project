@@ -9,7 +9,8 @@
         "pages/resume/resume",
         "pages/schedule/schedule",
         "pages/ifresume/ifresume",
-        "pages/result/result"
+        "pages/result/result",
+        "pages/service/service"
     ],
     "window": {
         "backgroundColor": "#fff",

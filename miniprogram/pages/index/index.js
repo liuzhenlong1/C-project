@@ -46,6 +46,8 @@ Page ({
     itemClick(e) {
         const itemIndex = e.currentTarget.dataset.index
         var itemObj = {}
+        const url = "../jobdetail/jobdetail?key=" + this.data.item1[itemIndex].company
+        console.log(url)
         if(this.data.index == 0) {
             var itemObj = this.data.item[itemIndex]
         }else {
@@ -53,30 +55,40 @@ Page ({
         }
         wx.setStorageSync("itemObj", itemObj)
         wx.navigateTo ({
-            url: "../jobdetail/jobdetail"
+            url: url
         })
     },
     getItem() {
         const that = this
+        var a = []
+        var b = []
         const db = wx.cloud.database()
-        db.collection("Jobs").where ({
-            "type": "全职"
-        }).get ({
-            success(res) {
-                that.setData ({
-                    item1: res.data,
-                    item: res.data
+        const _ = db.command
+        db.collection('Jobs')
+        .where(_.or(
+            {
+                type: "兼职"
+            },
+            { 
+                type: "全职"
+            })
+        )
+        .get({
+            success(res){
+                for(var i = 0; i < res.data.length; i++){
+                    if(res.data[i].type == '全职'){  
+                        a = a.concat(res.data[i])
+                    }
+                    else{
+                        b = b.concat(res.data[i])
+                    }
+                }
+                that.setData({
+                    item1: a,
+                    item2: b,
+                    item: a
                 })
-            }
-        })
-        db.collection("Jobs").where ({
-            "type": "兼职"
-        }).get ({
-            success(res) {
-                that.setData ({
-                    item2: res.data
-                })
-            }
+            }  
         })
     },
     onLoad() {

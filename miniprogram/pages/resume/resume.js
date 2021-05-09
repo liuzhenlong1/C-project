@@ -2,7 +2,8 @@ Page ({
     data: {
         eduBg: ["博士及以上", "硕士", "本科", "专科", "高中及以下"],
         workExp: ["5年及以上", "3-4年", "1-2年", "应届生", "在校学生"],
-        jobIntention: false
+        jobIntention: false,
+        userName: false
     },
     nameInput(e) {
         this.setData ({
@@ -79,15 +80,27 @@ Page ({
                 icon: "error"
             })
         }else {
-            console.log(name);
-            console.log(sex);
-            console.log(birth);
-            console.log(edubg);
-            console.log(workexp);
-            console.log(tel);
-            console.log(address);
-            console.log(intro);
+            const db = wx.cloud.database()
+            db.collection("resume").add({
+                data:{
+                    name: name,
+                    sex:sex,
+                    birth: birth,
+                    edubg: edubg,
+                    workexp: workexp,
+                    tel: tel,
+                    address: address,
+                    intro: intro,
+                    userName: this.data.userName
+                },
+                success(){
+                    wx.showToast({
+                      title: '保存成功',
+                      icon: "success"
+                    })
+                }
+            })
         }
-    }
+    },
 })
 

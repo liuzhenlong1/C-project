@@ -17,7 +17,7 @@ Page ({
                 let i = res.userInfo
                 that.setData ({
                     avatarUrl: i.avatarUrl,
-                    wxName: i.nickName
+                    wxName: i.nickName,
                 })
                 //将头像URL和微信名写进缓存
                 wx.setStorageSync("avatarUrl", that.data.avatarUrl)
