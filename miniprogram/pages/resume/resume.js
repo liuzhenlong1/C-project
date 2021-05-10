@@ -1,3 +1,5 @@
+const app = getApp()
+
 Page ({
     data: {
         eduBg: ["博士及以上", "硕士", "本科", "专科", "高中及以下"],
@@ -69,6 +71,8 @@ Page ({
         const {tel} = this.data
         const {address} = this.data
         const {intro} = this.data
+        const timeObj = app.getTime()
+        const time = timeObj.Y + '/' + timeObj.M + '/' + timeObj.D + ' ' + timeObj.h + ':' + timeObj.m + ':' + timeObj.s
         if(!name || !sex || !birth || !edubg || !workexp || !tel || !address || !intro) {
             wx.showToast ({
                 title: "信息未填写完整",
@@ -81,7 +85,7 @@ Page ({
             })
         }else {
             const db = wx.cloud.database()
-            db.collection("resume").add({
+            db.collection("Resume").add({
                 data:{
                     name: name,
                     sex:sex,
@@ -91,16 +95,23 @@ Page ({
                     tel: tel,
                     address: address,
                     intro: intro,
-                    userName: this.data.userName
+                    submittime: time
                 },
-                success(){
-                    wx.showToast({
-                      title: '保存成功',
-                      icon: "success"
+                success() {
+                    wx.showToast ({
+                      title: "保存成功"
+                    })
+                    setTimeout(() => {
+                        wx.navigateBack()
+                    }, 1000);
+                },
+                fail() {
+                    wx.showToast ({
+                        title: "上传失败",
+                        icon: "error"
                     })
                 }
             })
         }
     },
 })
-

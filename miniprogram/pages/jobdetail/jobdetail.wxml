@@ -11,14 +11,12 @@
         </view>
     </view>
     <view class="company">{{item.company}}</view>
-    <view class="tel">{{companyInfo[0].tel}}<image src="../../icon/phone.png" mode="aspectFit" /></view>
-    <view class="address">{{companyInfo[0].address}}</view>
+    <view class="tel">{{item.tel}}<image src="../../icon/phone.png" mode="aspectFit" bindtap="callBtn" /></view>
+    <view class="address">{{item.address}}</view>
     <view class="detail">
         <view class="title">要求</view>
     </view>
     <view class="edureq">{{item.eduReq}}</view>
     <view class="detailinfo">{{item.detailInfo}}</view>
-    <view class="btn">
-        <button type="primary" form-type="submit" bindtap="submitBtn">报名</button>
-    </view>
+    <button type="primary" bindtap="submitBtn">点击报名</button>
 </view>

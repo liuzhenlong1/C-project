@@ -1,17 +1,14 @@
 {
     "pages": [
-        "pages/login/login",
+        "pages/user/user",
+        "pages/schedule/schedule",
         "pages/index/index",
         "pages/jobdetail/jobdetail",
         "pages/admin/admin",
         "pages/feedBugs/feedBugs",
-        "pages/user/user",
         "pages/publishment/publishment",
-        "pages/resume/resume",
-        "pages/schedule/schedule",
         "pages/ifresume/ifresume",
-        "pages/result/result",
-        "pages/service/service"
+        "pages/result/result"
     ],
     "window": {
         "backgroundColor": "#fff",

@@ -1,3 +1,5 @@
+const app =  getApp();
+
 Page ({
     data: {
         salaryPickerArray: ["日", "月", "年"],
@@ -86,21 +88,9 @@ Page ({
             })
         }else {
             const salary = salaryNum + "/" + salaryWay;
-
-            let time = Date.parse(new Date());
-            time = time / 1000;
-            let n = time * 1000;
-            let date = new Date(n);
-            let Y = date.getFullYear();
-            let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-            let D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
-            let h = date.getHours();
-            let m = date.getMinutes();
-            let s = date.getSeconds();
-            
-            const id = Y + M + D + h + m + s;//时间作为公司的唯一标识
-            const times = Y + '/' + M + '/' + D + ' ' + h + ':' + m + ':' + s;
-            
+            const timeObj = app.getTime()
+            const id = timeObj.Y + timeObj.M + timeObj.D + timeObj.h + timeObj.m + timeObj.s
+            const times = timeObj.Y + '/' + timeObj.M + '/' + timeObj.D + ' ' + timeObj.h + ':' + timeObj.m + ':' + timeObj.s
             const db = wx.cloud.database()
             db.collection("Jobs").add({
                 data: {
@@ -112,29 +102,24 @@ Page ({
                     eduReq: eduReq,
                     treatment: treatment,
                     detailInfo: detailInfo,
-                    time: times
+                    time: times,
+                    address: address,
+                    tel: tel
                 },
                 success() {
                     wx.showToast({
                       title: '发布成功',
                       icon: 'success'
                     })
-                    setTimeout(function () {
+                    setTimeout(() => {
                         wx.navigateBack()
-                    }, 500)
+                    }, 1000)
                 },
                 fail() {
                     wx.showToast({
                       title: '发布失败',
                       icon: 'none'
                     })
-                }
-            })
-            db.collection("Companys").add({
-                data: {
-                    company: company,
-                    address: address,
-                    tel: tel
                 }
             })
         }

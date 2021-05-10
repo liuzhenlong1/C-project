@@ -46,8 +46,6 @@ Page ({
     itemClick(e) {
         const itemIndex = e.currentTarget.dataset.index
         var itemObj = {}
-        const url = "../jobdetail/jobdetail?key=" + this.data.item1[itemIndex].company
-        console.log(url)
         if(this.data.index == 0) {
             var itemObj = this.data.item[itemIndex]
         }else {
@@ -55,10 +53,11 @@ Page ({
         }
         wx.setStorageSync("itemObj", itemObj)
         wx.navigateTo ({
-            url: url
+            url: "../jobdetail/jobdetail"
         })
     },
     getItem() {
+        wx.showNavigationBarLoading()
         const that = this
         var a = []
         var b = []
@@ -76,22 +75,28 @@ Page ({
         .get({
             success(res){
                 for(var i = 0; i < res.data.length; i++){
-                    if(res.data[i].type == '全职'){  
+                    if(res.data[i].type == "全职"){  
                         a = a.concat(res.data[i])
-                    }
-                    else{
+                    }else {
                         b = b.concat(res.data[i])
                     }
                 }
-                that.setData({
+                that.setData ({
                     item1: a,
                     item2: b,
                     item: a
                 })
             }  
         })
+        setTimeout(() => {
+            wx.stopPullDownRefresh()
+            wx.hideNavigationBarLoading()
+        }, 1000);
     },
     onLoad() {
+        this.getItem()
+    },
+    onPullDownRefresh() {
         this.getItem()
     }
 })

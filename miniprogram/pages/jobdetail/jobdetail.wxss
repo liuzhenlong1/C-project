@@ -83,3 +83,6 @@ Page {
 .edureq {
     line-height: 100rpx;
 }
+.detailinfo {
+    margin-bottom: 100rpx;
+}

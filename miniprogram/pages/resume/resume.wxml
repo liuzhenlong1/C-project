@@ -48,14 +48,6 @@
                                 </picker>
                             </view>
                         </view>
-                        <view class="weui-cell weui-cell_active">
-                            <view class="weui-cell__hd">							
-                                <label class="weui-label">工作意向</label>
-                            </view>
-                            <view class="weui-cell__bd">
-                                对接数据库
-                            </view>
-                        </view>
                         <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
                             <view class="weui-cell__hd">
                                 <label class="weui-label">工作经验</label>

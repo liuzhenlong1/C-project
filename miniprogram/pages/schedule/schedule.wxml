@@ -1,36 +1,17 @@
 <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
-<block wx:if="{{index == 0}}">
-    <navigator class= "b" url="../jobDetail/jobDetail">
-        <view class="a">
-            <view class="jobNameAndSal">
-                <view class="name">
-                    <text class="a1">酒店服务生</text> 
-                </view>
-                <view class="salary">
-                    <text>100元/天</text>
+<block wx:for="{{item.length}}" wx:for-item="x" wx:key="id">
+    <navigator url="null">
+        <view class="item_content" bindtap="itemClick" data-index="{{index}}">
+            <view class="item_jobs">{{item[x].jobs}}</view>
+            <view class="item_company">{{item[x].company}}</view>
+            <view class="item_treatment">
+                <view class="item_salary">{{item[x].salary}}</view>
+                <view class="item_treatmentlist">
+                    <block wx:for="{{item[x].treatment.length}}" wx:for-item="y" wx:key="*this">
+                        <view class="item_treatmentitem" >{{item[x].treatment[y]}}</view>
+                    </block>
                 </view>
             </view>
-            <view class="companyAndAdd">
-                <view class="company">
-                    <text>公司名称：天津职业技术师范大学</text>
-                </view>
-                <view class="add">
-                    <text>天津津南</text>
-                </view>  
-            </view>
-            <view class="treatments">   
-                <view class="one">
-                    <text>包三餐</text>
-                </view>
-                <view class="one">
-                    <text>接送</text>
-                </view>
-                <view class="one">
-                    <text>年终奖</text>
-                </view>
-            </view> 
         </view>
     </navigator>
 </block>
-<block wx:elif="{{index == 1}}">已同意</block>
-<block wx:else>已拒绝</block>
