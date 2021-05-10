@@ -1,13 +1,9 @@
 <view class="userbox">
-    <!-- 如果缓存中有头像URL和微信名则展示此模块 -->
-    <view class="userinfo" wx:if="{{avatarUrl}}">
+    <view class="userinfo">
         <image src="{{avatarUrl}}" bindtap="getUserInfo" />
         <view>{{wxName}}</view>
     </view>
-    <!-- 如果缓存中无头像URL或微信名将展示此按钮 -->
-    <button wx:else bindtap="getUserInfo" type="primary">获取用户信息</button>
 </view>
-<!-- 功能模块 -->
 <view class="feature" wx:if="{{avatarUrl}}">
     <block wx:for="{{feature}}" wx:key="index">
         <navigator url="{{item}}">{{index}}</navigator>
