@@ -18,5 +18,5 @@
     </view>
     <view class="edureq">{{item.eduReq}}</view>
     <view class="detailinfo">{{item.detailInfo}}</view>
-    <button type="primary" bindtap="submitBtn">点击报名</button>
+    <button wx:if="{{!confirm}}" type="primary" bindtap="submitBtn">点击报名</button>
 </view>

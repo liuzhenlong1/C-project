@@ -1,5 +1,5 @@
 Page ({
-    onLoad() {
+    onLoad(options) {
         // 获取点击的 item 缓存
         try {
             var item = wx.getStorageSync("itemObj")
@@ -15,6 +15,11 @@ Page ({
         this.setData ({
             item
         })
+        if(options.confirm) {
+            this.setData ({
+                confirm: true
+            })
+        }
     },
     callBtn() {
         wx.makePhoneCall ({

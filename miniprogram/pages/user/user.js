@@ -35,7 +35,7 @@ Page ({
     // 获取用户的 Openid
     getOpenid() {
         const that = this
-        wx.cloud.callFunction({
+        wx.cloud.callFunction ({
             name: "getOpenid",
             complete(res) {
                 that.setData ({

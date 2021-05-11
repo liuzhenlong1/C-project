@@ -1,4 +1,4 @@
-<view class="box" wx:if="{{isResume}}">
+<view class="box" wx:if="{{isResume == 1}}">
     <view class="page" data-weui-theme="{{theme}}">
         <view class="weui-form">
             <view class="weui-form__text-area">
@@ -80,7 +80,7 @@
         </view>
     </view>
 </view>
-<view wx:else>
+<view wx:if="{{isResume == 0}}">
     <view style="text-align:center;margin:50rpx 0">您当前没有简历</view>
     <button type="primary" bindtap="goTo">前往填写</button>
 </view>

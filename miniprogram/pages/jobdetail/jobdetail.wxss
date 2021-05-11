@@ -7,7 +7,7 @@ Page {
 }
 .page {
     width: 95vw;
-    height: 95vh;
+    height: 90vh;
     padding: 30rpx;
     box-sizing: border-box;
     border: 3px double #1e90ff;
