@@ -3,8 +3,9 @@ Page ({
         feature: {
             "求职进程": "../schedule/schedule",
             "我的简历": "../ifresume/ifresume",
-            "管理员入口": "../admin/admin",
-            "BUG反馈": "../feedBugs/feedBugs"
+            "联系我们": "null",
+            "BUG反馈": "../feedBugs/feedBugs",
+            "管理员入口": "../admin/admin"
         }
     },
     // 弹出授权界面，获取用户资料
