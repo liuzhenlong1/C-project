@@ -1,3 +1,5 @@
+const app =  getApp()
+
 Page ({
     goTo() {
         wx.redirectTo ({
@@ -7,23 +9,21 @@ Page ({
     submitBtn() {
         const that = this
         const openId = wx.getStorageSync("openId")
+        const timeObj = app.getTime()
         const db = wx.cloud.database()
         db.collection("Status").where ({
-            _openid: openId
+            _openid: openId,
+            Job_id: this.data.jobId
         }).get ({
             success(res) {
                 // 确认用户是否报过名
-                for(let i = 0; i < res.data.length; i++) {
-                    if(res.data[i].Job_id == that.data.jobId) {
-                        var submitConfirm = true
-                        break
-                    }
-                }
-                if(!submitConfirm) {
+                if(res.data.length == 0) {
+                    const times = timeObj.Y + '/' + timeObj.M + '/' + timeObj.D + ' ' + timeObj.h + ':' + timeObj.m + ':' + timeObj.s
                     db.collection("Status").add ({
                         data: {
                             name: that.data.name,
                             Job_id: that.data.jobId,
+                            Upgrade_time: times,
                             status: "已上传"
                         },
                         success() {

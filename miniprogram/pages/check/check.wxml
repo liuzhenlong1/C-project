@@ -1,0 +1,7 @@
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
+<block wx:for="{{item}}" wx:key="_id">
+    <navigator class="box" url="null" bindtap="itemClick" data-index="{{index}}">
+        <view class="name">{{item.name}}</view>
+        <view class="time">{{item.Upgrade_time}}</view>
+    </navigator>
+</block>

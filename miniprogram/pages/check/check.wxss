@@ -1,0 +1,21 @@
+.box {
+    margin-top: 20rpx;
+    height: 100rpx;
+    background-color: #f5f5f5;
+    display: flex;
+}
+.name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 50rpx;
+    height: 100%;
+    font-size: 40rpx;
+}
+.time {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 30rpx;
+}

@@ -8,7 +8,7 @@ Page ({
             },
             {
                 id: 1,
-                name: "已同意"
+                name: "已通过"
             },
             {
                 id: 2,
@@ -57,7 +57,7 @@ Page ({
                 for(let i = 0; i < itemTemp.length; i++) {
                     if(itemTemp[i].status == "已上传") {
                         item1 = item1.concat(itemTemp[i].JobInfo)
-                    }else if(itemTemp[i].status == "已同意") {
+                    }else if(itemTemp[i].status == "已通过") {
                         item2 = item2.concat(itemTemp[i].JobInfo)
                     }else {
                         item3 = item3.concat(itemTemp[i].JobInfo)
