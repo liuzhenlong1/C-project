@@ -2,5 +2,6 @@
   "usingComponents": {
     "Tabs": "../../components/Tabs/Tabs"
   },
-  "navigationBarTitleText": "简历审批"
+  "navigationBarTitleText": "简历审批",
+  "enablePullDownRefresh": true
 }

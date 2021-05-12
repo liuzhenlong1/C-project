@@ -43,6 +43,10 @@ Page ({
                 that.setData ({
                     item: res.data
                 })
+                setTimeout(() => {
+                    wx.stopPullDownRefresh()
+                    wx.hideNavigationBarLoading()
+                }, 500);
             }
         })
     },
@@ -54,7 +58,22 @@ Page ({
             url: "./checkinfo/checkinfo?jobid=" + jobid + "&openid=" + openid + "&index=" + index
         })
     },
-    onShow() {
+    onLoad() {
         this.getStatus("已上传")
+    },
+    onShow() {
+        if(this.data.index == 0) {
+            this.getStatus("已上传")
+        }
+    },
+    onPullDownRefresh() {
+        wx.showNavigationBarLoading()
+        if(this.data.index == 0) {
+            this.getStatus("已上传")
+        }else if(this.data.index == 1) {
+            this.getStatus("已通过")
+        }else {
+            this.getStatus("已拒绝")
+        }
     }
 })
