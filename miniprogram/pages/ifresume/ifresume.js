@@ -65,18 +65,19 @@ Page ({
                 _openid: openId
             }).get ({
                 success(res) {
-                    that.setData ({
-                        isResume: 1,
-                        name: res.data[0].name,
-                        sex: res.data[0].sex,
-                        birth: res.data[0].birth,
-                        edubg: res.data[0].edubg,
-                        workexp: res.data[0].workexp,
-                        tel: res.data[0].tel,
-                        address: res.data[0].address,
-                        intro: res.data[0].intro
-                    })
-                    if(that.data.isResume != 1) {
+                    if(res.data.length != 0) {
+                        that.setData ({
+                            isResume: 1,
+                            name: res.data[0].name,
+                            sex: res.data[0].sex,
+                            birth: res.data[0].birth,
+                            edubg: res.data[0].edubg,
+                            workexp: res.data[0].workexp,
+                            tel: res.data[0].tel,
+                            address: res.data[0].address,
+                            intro: res.data[0].intro
+                        })
+                    }else {
                         that.setData ({
                             isResume: 0
                         })
