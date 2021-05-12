@@ -26,14 +26,11 @@ Page ({
             index
         })
         if(index == 0) {
-            const field = "已上传"
-            this.getStatus(field)
+            this.getStatus("已上传")
         }else if(index == 1){
-            const field = "已通过"
-            this.getStatus(field)
+            this.getStatus("已通过")
         }else {
-            const field = "已拒绝"
-            this.getStatus(field)
+            this.getStatus("已拒绝")
         }
     },
     getStatus(field) {
@@ -58,7 +55,6 @@ Page ({
         })
     },
     onShow() {
-        const field = "已上传"
-        this.getStatus(field)
+        this.getStatus("已上传")
     }
 })

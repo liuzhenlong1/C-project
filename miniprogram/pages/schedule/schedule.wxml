@@ -1,14 +1,14 @@
 <Tabs tabs="{{tabs}}" binditemChange="handleItemChange"></Tabs>
-<block wx:for="{{item.length}}" wx:for-item="x" wx:key="id">
+<block wx:for="{{item}}" wx:key="id">
     <navigator url="null">
         <view class="item_content" bindtap="itemClick" data-index="{{index}}">
-            <view class="item_jobs">{{item[x].jobs}}</view>
-            <view class="item_company">{{item[x].company}}</view>
+            <view class="item_jobs">{{item.jobs}}</view>
+            <view class="item_company">{{item.company}}</view>
             <view class="item_treatment">
-                <view class="item_salary">{{item[x].salary}}</view>
+                <view class="item_salary">{{item.salary}}</view>
                 <view class="item_treatmentlist">
-                    <block wx:for="{{item[x].treatment.length}}" wx:for-item="y" wx:key="*this">
-                        <view class="item_treatmentitem" >{{item[x].treatment[y]}}</view>
+                    <block wx:for="{{item.treatment.length}}" wx:for-item="y" wx:key="*this">
+                        <view class="item_treatmentitem" >{{item.treatment[y]}}</view>
                     </block>
                 </view>
             </view>

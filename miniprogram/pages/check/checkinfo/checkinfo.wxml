@@ -104,6 +104,5 @@
     <view class="button">
         <button type="primary" wx:if="{{index == 0}}" bindtap="accessBtn">通过</button>
         <button type="warn" wx:if="{{index == 0}}" bindtap="denyBtn">拒绝</button>
-        <button type="default" bindtap="deleteBtn">删除</button>
     </view>
 </view>

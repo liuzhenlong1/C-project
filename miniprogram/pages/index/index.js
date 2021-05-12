@@ -34,69 +34,83 @@ Page ({
             index
         })
         if(index == 0) {
-            this.setData ({
-                item: this.data.item1
-            })
+            this.getItem("全职")
         }else {
-            this.setData ({
-                item: this.data.item2
-            })
+            this.getItem("兼职")
         }
     },
     itemClick(e) {
-        const itemIndex = e.currentTarget.dataset.index
-        var itemObj = {}
-        if(this.data.index == 0) {
-            var itemObj = this.data.item[itemIndex]
-        }else {
-            var itemObj = this.data.item[itemIndex]
-        }
-        wx.setStorageSync("itemObj", itemObj)
-        wx.navigateTo ({
-            url: "../jobdetail/jobdetail"
-        })
-    },
-    getItem() {
-        wx.showNavigationBarLoading()
-        const that = this
-        var a = []
-        var b = []
-        const db = wx.cloud.database()
-        const _ = db.command
-        db.collection('Jobs')
-        .where(_.or(
-            {
-                type: "兼职"
-            },
-            { 
-                type: "全职"
+        const openId = wx.getStorageSync("openId")
+        if(openId) {
+            const itemIndex = e.currentTarget.dataset.index
+            var itemObj = {}
+            if(this.data.index == 0) {
+                var itemObj = this.data.item[itemIndex]
+            }else {
+                var itemObj = this.data.item[itemIndex]
+            }
+            wx.setStorageSync("itemObj", itemObj)
+            wx.navigateTo ({
+                url: "../jobdetail/jobdetail"
             })
-        )
-        .get({
-            success(res){
-                for(var i = 0; i < res.data.length; i++){
-                    if(res.data[i].type == "全职"){  
-                        a = a.concat(res.data[i])
-                    }else {
-                        b = b.concat(res.data[i])
+        }else {
+            wx.showModal ({
+                title: "提示",
+                content: "请前往用户页进行授权",
+                success(res) {
+                    if(res.confirm) {
+                        wx.switchTab ({
+                            url: "../user/user"
+                        })
+                    }else if(res.cancel) {
+                        wx.showToast ({
+                            title: "操作取消",
+                            icon: "error"
+                        })
                     }
                 }
-                that.setData ({
-                    item1: a,
-                    item2: b,
-                    item: a
+            })
+        }
+        
+    },
+    getItem(field) {
+        const that = this
+        const db = wx.cloud.database()
+        db.collection("Jobs").where ({
+            type: field
+        }).get ({
+            success(res) {
+                if(res.data.length != 0) {
+                    that.setData ({
+                        item: res.data
+                    })
+                }else {
+                    that.setData ({
+                        item: false
+                    })
+                }
+                setTimeout(() => {
+                    wx.stopPullDownRefresh()
+                    wx.hideNavigationBarLoading()
+                }, 500);
+            },
+            fail() {
+                wx.showToast ({
+                    title: "刷新失败",
+                    icon: "error"
                 })
-            }  
+            }
         })
-        setTimeout(() => {
-            wx.stopPullDownRefresh()
-            wx.hideNavigationBarLoading()
-        }, 1000);
     },
     onLoad() {
-        this.getItem()
+        this.getItem("全职")
     },
     onPullDownRefresh() {
-        this.getItem()
+        wx.showNavigationBarLoading()
+        if(this.data.index == 0) {
+            this.getItem("全职")
+        }else {
+            this.getItem("兼职")
+        }
     }
 })

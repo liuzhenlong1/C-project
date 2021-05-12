@@ -1,11 +1,11 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/user/user",
-        "pages/check/check",
-        "pages/check/checkinfo/checkinfo",
         "pages/admin/admin",
         "pages/schedule/schedule",
-        "pages/index/index",
+        "pages/check/check",
+        "pages/check/checkinfo/checkinfo",
         "pages/jobdetail/jobdetail",
         "pages/feedBugs/feedBugs",
         "pages/publishment/publishment",

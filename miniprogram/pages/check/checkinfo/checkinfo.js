@@ -104,28 +104,5 @@ Page ({
                 })
             }
         })
-    },
-    deleteBtn() {
-        const db = wx.cloud.database()
-        db.collection("Status").where ({
-            _openid: this.data.openid,
-            Job_id: this.data.jobid
-        }).remove ({
-            success() {
-                wx.showToast ({
-                    title: "删除成功"
-                })
-                setTimeout(() => {
-                    wx.navigateBack()
-                }, 1000);
-            },
-            fail() {
-                wx.showToast ({
-                    title: "删除失败",
-                    icon: "error"
-                })
-                
-            }
-        })
     }
 })

@@ -1,3 +1,5 @@
+const openId = wx.getStorageSync("openId")
+
 Page ({
     data: {
         tabs: [
@@ -26,51 +28,54 @@ Page ({
             index
         })
         if(index == 0) {
-            this.setData ({
-                item: this.data.item1
-            })
+            this.getJobId(openId, "已上传")
         }else if(index == 1){
-            this.setData ({
-                item: this.data.item2
-            })
+            this.getJobId(openId, "已通过")
         }else {
-            this.setData ({
-                item: this.data.item3
-            })
+            this.getJobId(openId, "已拒绝")
         }
     },
-    getJobInfo(openId) {
+    getJobId(openId, field) {
         const that = this
-        wx.cloud.callFunction ({
-            name: "getJobInfo",
-            data: {
-                openId
-            },
-            complete(res) {
-                var item1 = []
-                var item2 = []
-                var item3 = []
-                var itemTemp = []
-                for(let i = 0; i < res.result.list.length; i++) {
-                    itemTemp = itemTemp.concat(res.result.list[i])
+        const db = wx.cloud.database()
+        db.collection("Status").where ({
+            _openid: openId,
+            status: field
+        }).get ({
+            success(res) {
+                var jobIdList = []
+                for(let i = 0; i < res.data.length; i++) {
+                    jobIdList = jobIdList.concat(res.data[i].Job_id)
                 }
-                for(let i = 0; i < itemTemp.length; i++) {
-                    if(itemTemp[i].status == "已上传") {
-                        item1 = item1.concat(itemTemp[i].JobInfo)
-                    }else if(itemTemp[i].status == "已通过") {
-                        item2 = item2.concat(itemTemp[i].JobInfo)
-                    }else {
-                        item3 = item3.concat(itemTemp[i].JobInfo)
-                    }
+                if(jobIdList.length != 0) {
+                    that.getJobInfo(jobIdList)
+                }else {
+                    that.setData ({
+                        item: false
+                    })
                 }
-                that.setData ({
-                    item: item1,
-                    item1,
-                    item2,
-                    item3
-                })
+                
             }
         })
+    },
+    getJobInfo(jobIdList) {
+        const that = this
+        var item = []
+        const db = wx.cloud.database()
+        for(let i = 0; i < jobIdList.length; i++) {
+            db.collection("Jobs").where ({
+                id: jobIdList[i]
+            }).get ({
+                success(res) {
+                    item = item.concat(res.data)
+                    if(item.length == jobIdList.length) {
+                        that.setData ({
+                            item
+                        })
+                    }
+                }
+            })
+        }
     },
     itemClick(e) {
         const itemIndex = e.currentTarget.dataset.index
@@ -86,7 +91,6 @@ Page ({
         })
     },
     onLoad() {
-        const openId = wx.getStorageSync("openId")
-        this.getJobInfo(openId)
+        this.getJobId(openId, "已上传")
     }
 })

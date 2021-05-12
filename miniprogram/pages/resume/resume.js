@@ -103,7 +103,7 @@ Page ({
                     })
                     setTimeout(() => {
                         wx.navigateBack()
-                    }, 1000);
+                    }, 500);
                 },
                 fail() {
                     wx.showToast ({
