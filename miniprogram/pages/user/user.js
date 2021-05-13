@@ -3,7 +3,7 @@ Page ({
         feature: {
             "求职进程": "../schedule/schedule",
             "我的简历": "../ifresume/ifresume",
-            "联系我们": "null",
+            "联系我们": "../attach/attach",
             "BUG反馈": "../feedBugs/feedBugs",
             "管理员入口": "../admin/admin"
         }

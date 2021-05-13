@@ -1,0 +1,8 @@
+<view class="Box">
+    <view class="btnP">
+        <button type="primary" size="default" bindtap="callBtn">电话联系</button>
+    </view>
+    <view class="btnW">
+        <button type="primary" size="default" plain open-type="contact">微信联系</button>
+    </view>
+</view>

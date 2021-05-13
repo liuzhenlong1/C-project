@@ -1,0 +1,8 @@
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange" />
+<block wx:for="{{item.length}}" wx:for-item="x" wx:key="*this">
+    <navigator class="item" url="null">
+        <view class="i" bindtap="itemClick" data-index="{{index}}">
+            <text class="question">{{item[0].bugs}}</text>
+        </view>
+    </navigator>
+</block>

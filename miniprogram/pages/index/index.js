@@ -6,10 +6,10 @@ Page ({
             "/images/banner3.jpg",
         ],
         iconList: {
-            "服务承诺":["null","/icon/service.png"],
-            "招聘流程":["null","/icon/list.png"],
-            "报名须知":["null","/icon/warning.png"],
-            "常见问题":["null","/icon/question.png"]
+            "服务承诺":["../service/service","/icon/service.png"],
+            "招聘流程":["../process/process","/icon/list.png"],
+            "报名须知":["../baoming/baoming","/icon/warning.png"],
+            "常见问题":["../qustion/question","/icon/question.png"]
         },
         tabs: [
             {

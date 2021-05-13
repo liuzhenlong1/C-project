@@ -1,0 +1,27 @@
+.title{
+    margin-bottom: 10rpx; 
+    margin-left: 15rpx;
+}
+.title text{
+    font-size: 35rpx;   
+}
+.bug{
+    border-bottom: 2rpx solid #bababa;
+    min-height: 50rpx;
+    margin: 10rpx 20rpx 10rpx 20rpx;
+}
+
+.bug text{
+    font-size: 35rpx;
+}
+.answer{
+    border: 2rpx solid #bababa;
+    border-radius: 5px;
+    min-height: 150rpx;
+    margin: 10rpx 20rpx 10rpx 20rpx;
+}
+
+.btns{
+    margin-top: 20rpx;
+    display: flex;
+}

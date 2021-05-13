@@ -1,0 +1,8 @@
+.item{
+    background: #cfc9c9;
+    min-height: 100rpx;
+    padding-left: 10rpx;
+    padding-top: 50rpx;
+    margin-bottom: 10rpx;
+    margin-top: 15rpx;
+}

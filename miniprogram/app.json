@@ -1,16 +1,23 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/bugCheck/bugCheck",
+        "pages/bugRead/bugRead",
         "pages/user/user",
         "pages/admin/admin",
         "pages/schedule/schedule",
         "pages/check/check",
         "pages/check/checkinfo/checkinfo",
         "pages/jobdetail/jobdetail",
-        "pages/feedBugs/feedBugs",
         "pages/publishment/publishment",
+        "pages/feedBugs/feedBugs",
+        "pages/attach/attach",
         "pages/ifresume/ifresume",
-        "pages/result/result"
+        "pages/result/result",
+        "pages/process/process",
+        "pages/baoming/baoming",
+        "pages/service/service",
+        "pages/qustion/question"
     ],
     "window": {
         "backgroundColor": "#fff",

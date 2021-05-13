@@ -1,0 +1,24 @@
+.item{
+    border-bottom: 2rpx solid #bababa;
+    margin: 15rpx;
+}
+.question{
+    display: felx;
+}
+.question text{
+    font-size: 35rpx;
+    padding-left: 10rpx;
+}
+.answer text{
+    font-size: 30rpx;
+    padding: 10rpx;
+}
+.end{
+    margin-top: 50rpx;
+    margin: 50rpx 15rpx 0 15rpx;
+    text-align: center;
+}
+.end text{
+    color: rgb(199, 193, 183);
+}
+

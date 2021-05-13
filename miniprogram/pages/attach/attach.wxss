@@ -1,0 +1,4 @@
+.btnP{
+    margin-top: 30rpx;
+    margin-bottom: 50rpx;
+}

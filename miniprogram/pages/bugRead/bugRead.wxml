@@ -1,0 +1,22 @@
+<view class="Box">
+    <view class="bugD">
+        <view class="title">
+            <text class="t">问题/bug描述</text>
+        </view>
+        <view class="bug">
+            <text class="bugText" bindinput="detailInfoInput">{{item.bugs}}</text>
+        </view>
+    </view>
+    <view class="bugR">
+        <view class="title">
+            <text class="t">回答</text>
+        </view>
+        <view class="answer">
+            <textarea placeholder="请回答客户提的问题" class="answers" bindinput="detailInfoInput"/>
+        </view>
+    </view>
+    <view class="btns">
+        <button type="primary" bindtap="submitbtn">提交</button>
+        <button type="primary" bindtap="Readedbtn">已读</button>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="Box">
+    <view class="item" wx:for="{{question}}" wx:key="question">
+        <view class="question">
+            <text class="q">问: {{question[index].bugs}}?</text>
+        </view>
+        <view class="answer">
+            <text class="a">答：{{question[index].answer}}。</text>
+        </view>
+    </view>
+    <view class="end">
+        <text>我也是有底线的~~~
+            如果没有找到你的问题，可以向我们反馈的哦，我们会尽心回答您的问题
+            在此感谢大家的热情反馈与支持....
+        </text>
+    </view>
+</view>

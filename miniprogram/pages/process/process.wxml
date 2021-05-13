@@ -1,0 +1,19 @@
+<view class="Box">
+    <view class="item">
+        <text class="contain">
+            1、填写简历
+                
+            2、提交报名申请
+
+            3、联系招聘公司询问
+
+            3、等待管理员审批
+
+            4、审批通过后带上相关资料进行面试
+        </text>
+    </view>
+    <view class="img">
+        <image mode="widthFix" src="/images/process.png"/>
+    </view>
+    
+</view>

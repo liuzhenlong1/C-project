@@ -26,6 +26,9 @@ Page ({
         
         const times = Y + M + D + h + m + s;
 
+        const flag = "false";
+        const answer = null;
+        const isquestion = "false";
         if(!buginput) {
             wx.showToast ({
                 title: "请输入反馈信息",
@@ -37,6 +40,9 @@ Page ({
                 data: {
                     bugs: buginput,
                     time: times,
+                    flag: flag,
+                    answer: answer,
+                    isquestion: isquestion
                 },
                 success: res=>{
                     wx.showToast({
