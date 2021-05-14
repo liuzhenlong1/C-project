@@ -41,7 +41,7 @@ Page({
             })
         }
     },
-    onLoads(){
+    onLoad(){
         const t = wx.getStorageSync("hasLogin")
         if(t == "true"){
             wx.reLaunch({
