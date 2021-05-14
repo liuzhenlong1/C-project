@@ -26,6 +26,7 @@ page{
 .inputView { 
     background-color: #fff; 
     line-height: 44px; 
+    display: flex;
 } 
 .nameImage, .keyImage { 
     margin-left: 22px; 
