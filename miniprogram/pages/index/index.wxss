@@ -32,3 +32,30 @@
     border-bottom: 2px dotted currentColor;
     text-align: center;
 }
+.item_treatmentitem{
+    background: orange;
+}
+.item_company_add{
+    display: flex;
+    justify-content: space-between;
+    color: #bababa
+}
+.item_add_img{
+    display: flex;
+}
+.item_add_img image{
+    margin-top: 12rpx;
+    margin-right: 15rpx;
+    height: 30rpx;
+    width: 30rpx;
+}
+.item_company_img{
+    display: flex;
+}
+.item_company_img image{
+    margin-top: 12rpx;
+    margin-right: 15rpx;
+    height: 30rpx;
+    width: 30rpx;
+}
+

@@ -1,5 +1,5 @@
 .item{
-    background: #cfc9c9;
+    background: rgb(238, 238, 238);
     min-height: 100rpx;
     padding-left: 10rpx;
     padding-top: 50rpx;

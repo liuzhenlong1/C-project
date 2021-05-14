@@ -21,7 +21,16 @@
         <navigator url="null">
             <view class="item_content" bindtap="itemClick" data-index="{{index}}">
                 <view class="item_jobs">{{item.jobs}}</view>
-                <view class="item_company">{{item.company}}</view>
+                <view class="item_company_add">
+                    <view class="item_company_img">
+                        <image src="../../images/company.png"/>
+                        <view class="item_company">{{item.company}}</view>
+                    </view>
+                    <view class="item_add_img">
+                        <image src="../../images/address.png"/>
+                        <view class="item_add">{{item.address}}</view>
+                    </view>
+                </view>
                 <view class="item_treatment">
                     <view class="item_salary">{{item.salary}}</view>
                     <view class="item_treatmentlist">

@@ -1,11 +1,17 @@
 .item{
-    border-bottom: 2rpx solid #bababa;
-    margin: 15rpx;
+    margin-top: 15rpx;
+    margin-bottom: 10rpx;
+    background: rgb(238, 238, 238);
 }
+.item label{
+    margin-left: 20rpx;
+    color: #bababa
+} 
 .question{
     display: felx;
 }
 .question text{
+    color: red;
     font-size: 35rpx;
     padding-left: 10rpx;
 }
