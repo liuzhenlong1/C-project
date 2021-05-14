@@ -5,7 +5,7 @@ Page ({
             "我的简历": "../ifresume/ifresume",
             "联系我们": "../attach/attach",
             "BUG反馈": "../feedBugs/feedBugs",
-            "管理员入口": "../admin/admin"
+            "管理员入口": "../adminLogin/adminLogin"
         }
     },
     // 弹出授权界面，获取用户资料

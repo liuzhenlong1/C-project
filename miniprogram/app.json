@@ -1,5 +1,6 @@
 {
     "pages": [
+        
         "pages/index/index",
         "pages/bugCheck/bugCheck",
         "pages/bugRead/bugRead",
@@ -17,6 +18,7 @@
         "pages/process/process",
         "pages/baoming/baoming",
         "pages/service/service",
+        "pages/adminLogin/adminLogin",
         "pages/qustion/question"
     ],
     "window": {

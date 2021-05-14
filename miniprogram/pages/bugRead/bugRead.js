@@ -16,9 +16,9 @@ Page({
             const db = wx.cloud.database()
             db.collection('Bugs').doc(this.data.item._id).update({
                 data: {
-                answer: this.data.answer,
-                flag: "true",
-                isquestion: "true"
+                    answer: this.data.answer,
+                    flag: "true",
+                    isquestion: "true"
                 },
                 success:res=>{
                     wx.showToast({
@@ -63,6 +63,5 @@ Page({
                 confirm: true
             })
         }
-        console.log(item)
     }
 })

@@ -3,12 +3,13 @@
     margin-left: 15rpx;
 }
 .title text{
-    font-size: 35rpx;   
+    font-size: 30rpx;  
+    color: #bababa 
 }
 .bug{
-    border-bottom: 2rpx solid #bababa;
     min-height: 50rpx;
     margin: 10rpx 20rpx 10rpx 20rpx;
+    text-align: center;
 }
 
 .bug text{

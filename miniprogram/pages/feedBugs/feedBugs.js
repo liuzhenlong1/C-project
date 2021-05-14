@@ -50,7 +50,7 @@ Page ({
                         title: "提交成功",
                     }),
                     setTimeout(function () {
-                        wx.navigateTo({
+                        wx.reLaunch({
                           url: '../feedBugs/feedBugs'
                         })
                       }, 1500)
